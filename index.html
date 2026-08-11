@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Aman Online Centre</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        /* NAVIGATION MENU */
+
+        nav {
+            background-color: #003f8f;
+            text-align: center;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 20px;
+            font-size: 17px;
+        }
+
+        nav a:hover {
+            color: yellow;
+        }
+
+        /* HEADER */
+
+        header {
+            background-color: #0757b9;
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        header img {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+            margin-bottom: 15px;
+        }
+
+        header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 17px;
+        }
+
+        /* SERVICES */
+
+        .services {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .services h2 {
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+
+        .service-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white;
+            width: 300px;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-7px);
+        }
+
+        .card h3 {
+            color: #0757b9;
+            margin-bottom: 12px;
+        }
+
+        /* ABOUT */
+
+        .about {
+            background-color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .about h2 {
+            color: #0757b9;
+            margin-bottom: 15px;
+        }
+
+        .about p {
+            max-width: 700px;
+            margin: auto;
+            line-height: 1.7;
+        }
+
+        /* CONTACT */
+
+        .contact {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .contact h2 {
+            margin-bottom: 15px;
+        }
+
+        .contact p {
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 22px;
+            margin: 7px;
+            color: white;
+            text-decoration: none;
+            border-radius: 7px;
+            font-weight: bold;
+        }
+
+        .whatsapp {
+            background-color: #0a9f16;
+        }
+
+        .call {
+            background-color: #0757b9;
+        }
+
+        /* MOBILE RESPONSIVE */
+
+        @media (max-width: 600px) {
+
+            nav a {
+                display: inline-block;
+                margin: 7px;
+                font-size: 14px;
+            }
+
+            header h1 {
+                font-size: 25px;
+            }
+
+            .card {
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+<!-- MENU -->
+
+<nav>
+    <a href="#home">HOME</a>
+    <a href="#services">SERVICES</a>
+    <a href="#about">ABOUT US</a>
+    <a href="#contact">CONTACT</a>
+</nav>
+
+
+<!-- HEADER -->
+
+<header id="home">
+
+    <!-- Logo बाद में यहाँ लगाएंगे -->
+<img src="logo.jpg" alt="Aman Online Centre Logo">
+
+    <h1>AMAN ONLINE CENTRE</h1>
+
+    <p>आपकी डिजिटल सेवाओं का विश्वसनीय केंद्र</p>
+
+</header>
+
+
+<!-- SERVICES -->
+
+<section class="services" id="services">
+
+    <h2>हमारी सेवाएँ</h2>
+
+    <div class="service-container">
+
+        <div class="card">
+            <h3>PAN Card</h3>
+            <p>PAN Card संबंधित ऑनलाइन सेवाएँ उपलब्ध हैं।</p>
+        </div>
+
+
+        <div class="card">
+            <h3>Driving Licence</h3>
+            <p>Driving Licence संबंधित ऑनलाइन कार्य।</p>
+        </div>
+
+
+        <div class="card">
+            <h3>जमीन संबंधित कार्य</h3>
+            <p>जमीन रसीद, Mutation एवं अन्य ऑनलाइन कार्य।</p>
+        </div>
+
+
+        <div class="card">
+            <h3>जाति, आय एवं निवास</h3>
+            <p>जाति, आय एवं निवास प्रमाण पत्र संबंधित ऑनलाइन कार्य।</p>
+        </div>
+
+
+        <div class="card">
+            <h3>Voter Card</h3>
+            <p>Voter Card संबंधित ऑनलाइन सेवाएँ।</p>
+        </div>
+
+
+        <div class="card">
+            <h3>Photocopy & Lamination</h3>
+            <p>Photocopy एवं Lamination की सुविधा उपलब्ध है।</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+<section style="text-align:center; padding:40px 20px; background:white;">
+
+    <h2 style="color:#0757b9; margin-bottom:20px;">
+        हमारा केंद्र
+    </h2>
+
+    <img src="Shop.jpg"
+         alt="Aman Online Centre Shop"
+         style="width:300px; max-width:90%; border-radius:12px;
+         box-shadow:0 4px 12px rgba(0,0,0,0.25);">
+
+    <h3 style="margin-top:20px;">AMAN ONLINE CENTRE</h3>
+
+    <p style="margin-top:10px;">
+        खरीक बाजार, भागलपुर, बिहार
+    </p>
+<a href="https://maps.app.goo.gl/sC8u6T7jhacEhj3o7?g_st=aw"
+   target="_blank"
+   style="
+   display:inline-block;
+   margin-top:15px;
+   padding:12px 22px;
+   background:#0757b9;
+   color:white;
+   text-decoration:none;
+   border-radius:7px;
+   font-weight:bold;">
+   📍 Google Maps पर Location देखें
+</a>
+
+</section>
+
+    <h2>About Us</h2>
+
+    <p>
+        Aman Online Centre में विभिन्न डिजिटल एवं ऑनलाइन सेवाएँ
+        ग्राहकों को सरल और सुविधाजनक तरीके से उपलब्ध कराई जाती हैं।
+    </p>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+    <h2>Contact Us</h2>
+
+    <p>अधिक जानकारी के लिए संपर्क करें</p>
+
+    <a class="btn whatsapp"
+       href="https://wa.me/917992332267">
+       WhatsApp करें
+    </a>
+
+    <a class="btn call"
+       href="tel:+917992332267">
+       📞 Call Now
+    </a>
+
+</section>
+
+
+</body>
+</html>
