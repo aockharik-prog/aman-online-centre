@@ -1,2477 +1,549 @@
-<!DOCTYPE html>
-<html lang="hi">
-
-<head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
-
-<title>
-Aman Online Centre Kharik | Online Services, Job Form & Mock Test
-</title>
-
-<meta name="description"
-content="Aman Online Centre Kharik Bazar, Bhagalpur में PAN Card, Voter Card, Driving Licence, Job Form Online, जमीन संबंधित कार्य, Ayushman Card, Passport, ITR, GST, Mobile Repairing, Photocopy, Mock Test और PDF Study Material उपलब्ध हैं।">
-
-<meta name="keywords"
-content="Aman Online Centre, Aman Online Centre Kharik, Online Centre Kharik, Kharik Bazar Online Centre, Job Form Online Kharik, Mock Test Kharik, PAN Card Kharik, Digital Seva Kharik, Bhagalpur Online Centre">
-
-<meta name="robots"
-content="index, follow">
-
-<meta name="theme-color"
-content="#063b78">
-
-
-<!-- =========================
-LOCAL BUSINESS SEO
-========================= -->
-
-<script type="application/ld+json">
-
-{
-"@context":"https://schema.org",
-
-"@type":"LocalBusiness",
-
-"name":"Aman Online Centre",
-
-"url":"https://aockharik-prog.github.io/aman-online-centre/",
-
-"telephone":[
-"+91-7992332267",
-"+91-9570619087"
-],
-
-"hasMap":
-"https://maps.app.goo.gl/sC8u6T7jhacEhj3o7?g_st=aw",
-
-"address":{
-"@type":"PostalAddress",
-
-"streetAddress":
-"Ganinath Mandir Road, Pani Tanki Ke Samne",
-
-"addressLocality":
-"Kharik Bazar",
-
-"addressRegion":
-"Bihar",
-
-"postalCode":
-"853202",
-
-"addressCountry":
-"IN"
-},
-
-"areaServed":{
-"@type":"Place",
-
-"name":
-"Kharik, Bhagalpur, Bihar"
-}
-
-}
-
-</script>
-
-
+<!-- =========================================================
+     AMAN ONLINE CENTRE
+     PROFESSIONAL MULTI EXAM MOCK TEST SYSTEM
+========================================================= -->
 
 <style>
 
-/* =====================================
-BASIC SETTINGS
-===================================== */
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-html{
-scroll-behavior:smooth;
-}
-
-body{
-
-font-family:
-Arial,
-"Noto Sans Devanagari",
-sans-serif;
-
-background:#f5f8fd;
-
-color:#172033;
-
-line-height:1.6;
-}
-
-.container{
-
-width:92%;
-
-max-width:1250px;
-
-margin:auto;
-}
-
-section{
-
-scroll-margin-top:75px;
-}
-
-a{
-
-text-decoration:none;
-}
-
-
-
-/* =====================================
-NAVBAR
-===================================== */
-
-.navbar{
-
-position:sticky;
-
-top:0;
-
-z-index:1000;
-
-background:
-linear-gradient(
-90deg,
-#062b60,
-#084884
-);
-
-box-shadow:
-0 4px 18px rgba(0,0,0,.18);
-}
-
-.nav-wrap{
-
-min-height:64px;
-
-display:flex;
-
-align-items:center;
-
-justify-content:space-between;
-
-gap:20px;
-}
-
-.brand{
-
-display:flex;
-
-align-items:center;
-
-gap:10px;
-
-color:white;
-
-font-size:22px;
-
-font-weight:800;
-}
-
-.brand img{
-
-width:42px;
-
-height:42px;
-
-border-radius:50%;
-
-object-fit:cover;
-
-border:2px solid white;
-}
-
-.nav-links{
-
-display:flex;
-
-align-items:center;
-
-gap:19px;
-}
-
-.nav-links a{
-
-color:white;
-
-font-size:13px;
-
-font-weight:700;
-
-transition:.2s;
-}
-
-.nav-links a:hover{
-
-color:#54ccff;
-}
-
-.nav-call{
-
-background:#1261c9;
-
-padding:9px 15px;
-
-border-radius:25px;
-}
-
-.menu-btn{
-
-display:none;
-
-background:none;
-
-border:none;
-
-color:white;
-
-font-size:28px;
-
-cursor:pointer;
-}
-
-
-
-/* =====================================
-HERO
-===================================== */
-
-.hero{
-
-min-height:410px;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-text-align:center;
-
-color:white;
-
-padding:35px 20px;
-
-background:
-
-linear-gradient(
-rgba(2,37,78,.89),
-rgba(4,84,178,.87)
-),
-
-url("Shop.jpg");
-
-background-size:cover;
-
-background-position:center;
-}
-
-.hero-content{
-
-width:100%;
-
-max-width:900px;
-}
-
-.hero-logo{
-
-width:115px;
-
-height:115px;
-
-object-fit:cover;
-
-border-radius:50%;
-
-border:4px solid white;
-
-box-shadow:
-0 8px 30px rgba(0,0,0,.35);
-
-margin-bottom:12px;
-}
-
-.hero h1{
-
-font-size:42px;
-
-line-height:1.15;
-
-margin-bottom:8px;
-}
-
-.tagline{
-
-font-size:19px;
-
-margin-bottom:5px;
-}
-
-.seo-tagline{
-
-font-size:14px;
-
-opacity:.9;
-
-margin-bottom:6px;
-}
-
-.hero-address{
-
-font-size:14px;
-
-font-weight:600;
-}
-
-.hero-buttons{
-
-display:flex;
-
-justify-content:center;
-
-flex-wrap:wrap;
-
-gap:12px;
-
-margin-top:20px;
-}
-
-.hero-btn{
-
-display:inline-flex;
-
-align-items:center;
-
-justify-content:center;
-
-min-width:165px;
-
-padding:11px 20px;
-
-border-radius:30px;
-
-font-size:14px;
-
-font-weight:700;
-
-transition:.25s;
-}
-
-.hero-btn:hover{
-
-transform:translateY(-3px);
-
-box-shadow:
-0 8px 20px rgba(0,0,0,.2);
-}
-
-.services-btn{
-
-background:white;
-
-color:#0756ae;
-}
-
-.whatsapp-btn{
-
-background:#17c65b;
-
-color:white;
-}
-
-.call-btn{
-
-color:white;
-
-border:2px solid white;
-
-background:
-rgba(255,255,255,.08);
-}
-
-
-
-/* =====================================
-COMMON SECTION
-===================================== */
-
-.section{
-
-padding:60px 0;
-}
-
-.section-title{
-
-text-align:center;
-
-margin-bottom:30px;
-}
-
-.section-title h2{
+/* =========================
+   MOCK TEST LIBRARY
+========================= */
 
-color:#0755ad;
-
-font-size:33px;
-
-margin-bottom:5px;
-}
-
-.section-title p{
-
-color:#6d7788;
-
-font-size:15px;
-}
-
-
-
-/* =====================================
-SERVICE SEARCH
-===================================== */
-
-.service-search{
-
-max-width:650px;
-
-margin:
-0 auto 35px;
-
-position:relative;
-}
-
-.service-search input{
-
-width:100%;
-
-padding:
-15px 50px 15px 20px;
-
-border:
-2px solid #dbe6f5;
-
-outline:none;
-
-border-radius:30px;
-
-font-size:16px;
-
-background:white;
-
-box-shadow:
-0 6px 20px rgba(0,0,0,.07);
-}
-
-.service-search input:focus{
-
-border-color:#168de2;
-}
-
-.search-icon{
-
-position:absolute;
-
-right:20px;
-
-top:50%;
-
-transform:
-translateY(-50%);
-
-font-size:21px;
-}
-
-.no-result{
-
-display:none;
-
-text-align:center;
-
-color:#cf2525;
-
-font-weight:bold;
-
-margin:
-15px 0 30px;
-}
-
-
-
-/* =====================================
-SERVICES
-===================================== */
-
-.services-section{
-
-background:
-linear-gradient(
-180deg,
-#ffffff,
-#edf5ff
-);
-}
-
-.services-grid{
-
-display:grid;
-
-grid-template-columns:
-repeat(3,1fr);
-
-gap:18px;
-}
-
-.service-card{
-
-background:white;
-
-border-radius:15px;
-
-padding:23px 20px;
-
-display:flex;
-
-align-items:center;
-
-gap:17px;
-
-min-height:125px;
-
-border:
-1px solid #e8edf5;
-
-box-shadow:
-0 7px 20px rgba(22,57,100,.08);
-
-position:relative;
-
-overflow:hidden;
-
-transition:.3s;
-}
-
-.service-card::before{
-
-content:"";
-
-position:absolute;
-
-top:0;
-
-left:0;
-
-width:100%;
-
-height:3px;
-
-background:
-linear-gradient(
-90deg,
-#0877db,
-#18c76b
-);
+.mock-system{
+    padding:60px 0;
+    background:linear-gradient(180deg,#f5f9ff,#eaf3ff);
 }
-
-.service-card:hover{
 
-transform:
-translateY(-6px);
-
-box-shadow:
-0 14px 30px rgba(18,69,130,.15);
+.mock-container{
+    width:92%;
+    max-width:1200px;
+    margin:auto;
 }
-
-.service-icon{
-
-flex:0 0 58px;
-
-width:58px;
-
-height:58px;
 
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-border-radius:50%;
-
-background:#eef5ff;
-
-font-size:29px;
+.mock-heading{
+    text-align:center;
+    margin-bottom:30px;
 }
-
-.service-card h3{
 
-color:#064ca4;
-
-font-size:17px;
-
-margin-bottom:4px;
+.mock-heading h2{
+    color:#0755ad;
+    font-size:34px;
+    margin-bottom:5px;
 }
-
-.service-card p{
-
-color:#596577;
-
-font-size:13px;
 
-line-height:1.5;
+.mock-heading p{
+    color:#667085;
 }
 
+/* SEARCH */
 
-
-/* =====================================
-WHY CHOOSE US
-===================================== */
-
-.why-section{
-
-background:#edf5ff;
-
-padding:
-55px 0 65px;
+.exam-search{
+    max-width:650px;
+    margin:0 auto 30px;
 }
-
-.why-grid{
 
-display:grid;
-
-grid-template-columns:
-repeat(4,1fr);
-
-gap:18px;
+.exam-search input{
+    width:100%;
+    padding:15px 20px;
+    border-radius:30px;
+    border:2px solid #d9e5f4;
+    background:white;
+    font-size:16px;
+    outline:none;
 }
-
-.why-box{
-
-background:white;
-
-padding:27px 18px;
 
-text-align:center;
-
-border-radius:15px;
-
-box-shadow:
-0 7px 22px rgba(0,0,0,.07);
-
-transition:.3s;
+.exam-search input:focus{
+    border-color:#0874d8;
 }
 
-.why-box:hover{
+/* EXAM CARDS */
 
-transform:
-translateY(-5px);
+.exam-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
 }
 
-.why-icon{
-
-font-size:32px;
-
-margin-bottom:10px;
+.exam-card{
+    background:white;
+    border-radius:16px;
+    padding:22px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    border-top:4px solid #0874d8;
+    transition:.3s;
 }
-
-.why-box h3{
 
-color:#0755ad;
-
-font-size:17px;
-
-margin-bottom:5px;
+.exam-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 13px 30px rgba(0,0,0,.12);
 }
 
-.why-box p{
-
-color:#697386;
-
-font-size:13px;
+.exam-icon{
+    font-size:42px;
 }
-
 
-
-/* =====================================
-CENTRE
-===================================== */
-
-.centre-section{
-
-background:white;
+.exam-card h3{
+    color:#0755ad;
+    margin:8px 0;
 }
-
-.centre-wrap{
-
-display:grid;
-
-grid-template-columns:
-1fr 1fr;
 
-gap:45px;
-
-align-items:center;
+.exam-meta{
+    font-size:13px;
+    color:#667085;
+    margin-bottom:15px;
 }
-
-.centre-image{
 
-border-radius:20px;
-
-overflow:hidden;
-
-box-shadow:
-0 15px 35px rgba(0,0,0,.15);
+.exam-buttons{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
 }
-
-.centre-image img{
 
-display:block;
-
-width:100%;
-
-height:350px;
-
-object-fit:cover;
+.exam-buttons button,
+.exam-buttons a{
+    border:none;
+    border-radius:8px;
+    padding:11px;
+    font-weight:bold;
+    cursor:pointer;
+    text-decoration:none;
 }
-
-.centre-content h2{
-
-color:#0755ad;
-
-font-size:32px;
 
-margin-bottom:13px;
+.start-exam{
+    background:#0874d8;
+    color:white;
 }
 
-.centre-content p{
-
-color:#5f6878;
-
-margin-bottom:12px;
-
-font-size:15px;
+.view-pdf{
+    background:#eef5ff;
+    color:#0755ad;
 }
-
-.location-btn{
-
-display:inline-block;
 
-margin-top:12px;
-
-background:#0965c5;
-
-color:white;
-
-padding:11px 20px;
-
-border-radius:8px;
-
-font-weight:700;
+.download-pdf{
+    background:#16a34a;
+    color:white;
 }
-
 
 
-/* =====================================
-MOCK TEST
-===================================== */
+/* =========================
+   TEST SCREEN
+========================= */
 
-.exam-section{
-
-padding:65px 0;
-
-background:
-linear-gradient(
-180deg,
-#f4f8ff,
-#ffffff
-);
+.test-screen{
+    display:none;
+    max-width:950px;
+    margin:30px auto 0;
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 12px 35px rgba(0,0,0,.12);
 }
-
-.exam-wrapper{
-
-max-width:950px;
-
-margin:auto;
 
-background:white;
-
-border-radius:22px;
-
-box-shadow:
-0 15px 45px rgba(16,65,120,.12);
-
-overflow:hidden;
-
-border:
-1px solid #e4ecf7;
+.test-header{
+    background:linear-gradient(135deg,#063b78,#0874d8);
+    color:white;
+    padding:22px;
+    text-align:center;
 }
-
-.exam-header{
-
-background:
-linear-gradient(
-135deg,
-#053b79,
-#0874d8
-);
 
-color:white;
-
-padding:25px;
-
-text-align:center;
+.test-header h2{
+    margin-bottom:4px;
 }
 
-.exam-header h2{
-
-font-size:29px;
-
-margin-bottom:5px;
+.test-start{
+    padding:35px;
+    text-align:center;
 }
-
-.exam-start{
 
-padding:35px;
-
-text-align:center;
+.test-start input{
+    width:100%;
+    max-width:450px;
+    padding:14px;
+    border:2px solid #dbe5ef;
+    border-radius:9px;
+    font-size:16px;
+    margin:18px 0;
 }
-
-.exam-start input{
-
-width:100%;
-
-max-width:450px;
-
-padding:14px 18px;
-
-border:
-2px solid #dbe5f1;
 
-border-radius:10px;
-
-font-size:16px;
-
-outline:none;
-
-margin:18px 0;
+.begin-btn{
+    border:none;
+    background:#0874d8;
+    color:white;
+    padding:13px 30px;
+    border-radius:25px;
+    font-weight:bold;
+    cursor:pointer;
 }
-
-.start-test-btn{
-
-border:none;
-
-background:
-linear-gradient(
-135deg,
-#0874d8,
-#0553a5
-);
-
-color:white;
-
-padding:
-14px 30px;
-
-border-radius:30px;
-
-font-size:16px;
-
-font-weight:bold;
 
-cursor:pointer;
+.close-test{
+    margin-left:8px;
+    border:none;
+    background:#e7eaf0;
+    padding:13px 22px;
+    border-radius:25px;
+    cursor:pointer;
 }
 
-.exam-area{
 
-display:none;
+/* QUESTION AREA */
 
-padding:25px;
+.question-area{
+    display:none;
+    padding:25px;
 }
 
 .exam-info{
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-gap:10px;
-
-flex-wrap:wrap;
-
-background:#edf5ff;
-
-padding:13px 18px;
-
-border-radius:10px;
-
-margin-bottom:20px;
-
-font-weight:bold;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:10px;
+    padding:13px 15px;
+    background:#eef5ff;
+    border-radius:9px;
+    margin-bottom:18px;
+    font-weight:bold;
 }
 
-.timer{
-
-color:#d92d20;
+.exam-timer{
+    color:#d92d20;
 }
 
-.progress-track{
-
-height:7px;
-
-background:#e2e8f0;
-
-border-radius:20px;
-
-overflow:hidden;
-
-margin-bottom:22px;
+.progress-bg{
+    width:100%;
+    height:7px;
+    background:#e5e7eb;
+    border-radius:10px;
+    overflow:hidden;
+    margin-bottom:20px;
 }
 
-.progress-bar{
-
-height:100%;
-
-width:0%;
-
-background:
-linear-gradient(
-90deg,
-#0874d8,
-#12b76a
-);
-
-transition:.3s;
+.progress-fill{
+    height:100%;
+    width:0%;
+    background:linear-gradient(90deg,#0874d8,#16a34a);
 }
 
-.question-box{
-
-padding:25px;
-
-background:#fafcff;
-
-border:
-1px solid #e5edf6;
-
-border-radius:15px;
+.question-card{
+    padding:22px;
+    background:#fafcff;
+    border:1px solid #e2e8f0;
+    border-radius:12px;
 }
 
-.question-number{
-
-color:#0874d8;
-
-font-size:14px;
-
-font-weight:bold;
-
-margin-bottom:8px;
+.question-no{
+    color:#0874d8;
+    font-weight:bold;
+    margin-bottom:7px;
 }
 
-.question-title{
-
-font-size:20px;
-
-font-weight:bold;
-
-margin-bottom:20px;
+.question-text{
+    font-size:19px;
+    font-weight:bold;
+    margin-bottom:17px;
 }
 
-.option{
-
-display:block;
-
-padding:13px 15px;
-
-margin:10px 0;
-
-border:
-1px solid #dce5ef;
-
-border-radius:10px;
-
-cursor:pointer;
-
-background:white;
-
-transition:.2s;
+.answer-option{
+    display:block;
+    padding:13px;
+    border:1px solid #dbe4ee;
+    border-radius:9px;
+    margin:9px 0;
+    cursor:pointer;
+    background:white;
 }
 
-.option:hover{
-
-border-color:#0874d8;
-
-background:#eef6ff;
+.answer-option:hover{
+    background:#eef6ff;
+    border-color:#0874d8;
 }
 
-.option input{
-
-margin-right:9px;
+.answer-option input{
+    margin-right:8px;
 }
 
-.exam-navigation{
+/* NAVIGATION */
 
-display:flex;
-
-justify-content:space-between;
-
-gap:10px;
-
-margin-top:22px;
+.test-navigation{
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+    margin-top:20px;
 }
 
-.exam-nav-btn{
-
-border:none;
-
-padding:11px 22px;
-
-border-radius:8px;
-
-cursor:pointer;
-
-font-weight:bold;
+.nav-test-btn{
+    border:none;
+    border-radius:8px;
+    padding:11px 20px;
+    font-weight:bold;
+    cursor:pointer;
 }
 
-.prev-btn{
-
-background:#e8eef5;
-
-color:#344054;
+.previous-btn{
+    background:#e9eef5;
 }
 
 .next-btn{
-
-background:#0874d8;
-
-color:white;
+    background:#0874d8;
+    color:white;
 }
 
-.submit-btn{
-
-background:#12a150;
-
-color:white;
+.final-submit{
+    background:#16a34a;
+    color:white;
 }
+
+/* QUESTION PALETTE */
 
 .question-palette{
-
-display:flex;
-
-flex-wrap:wrap;
-
-gap:7px;
-
-margin-top:25px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px;
+    margin-top:22px;
 }
 
-.palette-btn{
-
-width:38px;
-
-height:38px;
-
-border:none;
-
-border-radius:7px;
-
-cursor:pointer;
-
-background:#e8eef5;
-
-font-weight:bold;
+.palette-question{
+    width:38px;
+    height:38px;
+    border:none;
+    border-radius:7px;
+    background:#e9eef5;
+    font-weight:bold;
+    cursor:pointer;
 }
 
-.palette-btn.active{
-
-background:#0874d8;
-
-color:white;
+.palette-question.current{
+    background:#0874d8;
+    color:white;
 }
 
-.palette-btn.answered{
-
-background:#16a34a;
-
-color:white;
-}
-
-.result-box{
-
-display:none;
-
-padding:35px;
-
-text-align:center;
-}
-
-.result-score{
-
-width:150px;
-
-height:150px;
-
-border-radius:50%;
-
-margin:
-20px auto;
-
-display:flex;
-
-flex-direction:column;
-
-align-items:center;
-
-justify-content:center;
-
-background:
-linear-gradient(
-135deg,
-#0755ad,
-#0b87df
-);
-
-color:white;
-
-box-shadow:
-0 10px 25px rgba(0,85,170,.25);
-}
-
-.result-score strong{
-
-font-size:36px;
-}
-
-.result-grid{
-
-display:grid;
-
-grid-template-columns:
-repeat(4,1fr);
-
-gap:12px;
-
-margin:
-25px 0;
-}
-
-.result-stat{
-
-padding:
-17px 10px;
-
-border-radius:10px;
-
-background:#f4f7fb;
-}
-
-.result-stat strong{
-
-display:block;
-
-font-size:22px;
-
-color:#0755ad;
-}
-
-.review-box{
-
-text-align:left;
-
-margin-top:25px;
-}
-
-.review-item{
-
-margin:
-15px 0;
-
-padding:17px;
-
-background:#f8fafc;
-
-border-radius:10px;
-
-border-left:
-4px solid #0874d8;
-}
-
-.restart-btn{
-
-padding:
-12px 25px;
-
-background:#0874d8;
-
-color:white;
-
-border:none;
-
-border-radius:25px;
-
-font-weight:bold;
-
-cursor:pointer;
-
-margin-top:20px;
+.palette-question.done{
+    background:#16a34a;
+    color:white;
 }
 
 
+/* =========================
+   RESULT
+========================= */
 
-/* =====================================
-PDF STUDY MATERIAL
-===================================== */
-
-.pdf-section{
-
-padding:65px 0;
-
-background:#eef5ff;
+.test-result{
+    display:none;
+    padding:30px;
+    text-align:center;
 }
 
-.pdf-grid{
-
-display:grid;
-
-grid-template-columns:
-repeat(3,1fr);
-
-gap:20px;
+.score-circle{
+    width:150px;
+    height:150px;
+    margin:20px auto;
+    border-radius:50%;
+    background:linear-gradient(135deg,#0755ad,#0c8ee8);
+    color:white;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
 }
 
-.pdf-card{
-
-background:white;
-
-padding:25px;
-
-border-radius:16px;
-
-box-shadow:
-0 8px 25px rgba(0,0,0,.08);
-
-text-align:center;
-
-border-top:
-4px solid #0874d8;
+.score-circle strong{
+    font-size:35px;
 }
 
-.pdf-icon{
-
-font-size:48px;
-
-margin-bottom:12px;
+.result-stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:10px;
+    margin:25px 0;
 }
 
-.pdf-card h3{
-
-color:#0755ad;
-
-margin-bottom:8px;
+.result-item{
+    background:#f3f7fb;
+    border-radius:10px;
+    padding:15px 5px;
 }
 
-.pdf-card p{
-
-color:#667085;
-
-font-size:14px;
-
-margin-bottom:18px;
+.result-item strong{
+    display:block;
+    font-size:22px;
+    color:#0755ad;
 }
 
-.pdf-btn{
-
-display:inline-block;
-
-margin:5px;
-
-padding:
-10px 16px;
-
-border-radius:7px;
-
-color:white;
-
-font-weight:bold;
+.answer-review{
+    text-align:left;
+    margin-top:25px;
 }
 
-.pdf-view{
-
-background:#0874d8;
+.review-question{
+    padding:15px;
+    margin:12px 0;
+    background:#f8fafc;
+    border-radius:9px;
+    border-left:4px solid #0874d8;
 }
 
-.pdf-download{
-
-background:#16a34a;
+.restart-test{
+    margin-top:20px;
+    padding:12px 25px;
+    border:none;
+    border-radius:25px;
+    background:#0874d8;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
 }
 
 
+/* MOBILE */
 
-/* =====================================
-ABOUT
-===================================== */
+@media(max-width:900px){
 
-.about-section{
-
-background:#f5f8fd;
-}
-
-.about-box{
-
-max-width:900px;
-
-margin:auto;
-
-background:white;
-
-padding:35px;
-
-text-align:center;
-
-border-radius:20px;
-
-box-shadow:
-0 10px 30px rgba(0,0,0,.07);
-}
-
-.about-box p{
-
-font-size:16px;
-
-color:#5e6879;
-}
-
-
-
-/* =====================================
-CONTACT
-===================================== */
-
-.contact-section{
-
-background:
-linear-gradient(
-135deg,
-#071d3c,
-#0b3c72
-);
-
-color:white;
-
-padding:
-55px 20px;
-}
-
-.contact-content{
-
-max-width:800px;
-
-margin:auto;
-
-text-align:center;
-}
-
-.contact-content h2{
-
-font-size:31px;
-
-margin-bottom:12px;
-}
-
-.contact-buttons{
-
-display:flex;
-
-flex-wrap:wrap;
-
-justify-content:center;
-
-gap:12px;
-
-margin-top:23px;
-}
-
-.contact-buttons a{
-
-padding:
-11px 19px;
-
-border-radius:8px;
-
-color:white;
-
-font-weight:700;
-}
-
-.contact-whatsapp{
-
-background:#11b94c;
-}
-
-.contact-call{
-
-background:#0870d8;
-}
-
-
-
-/* =====================================
-FOOTER
-===================================== */
-
-footer{
-
-background:#041426;
-
-color:#dce6f2;
-
-text-align:center;
-
-padding:
-20px 10px;
-
-font-size:13px;
-}
-
-
-
-/* =====================================
-FLOATING WHATSAPP
-===================================== */
-
-.floating-whatsapp{
-
-position:fixed;
-
-right:20px;
-
-bottom:20px;
-
-width:58px;
-
-height:58px;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-background:#18c85d;
-
-color:white;
-
-border-radius:50%;
-
-font-size:28px;
-
-box-shadow:
-0 8px 22px rgba(0,0,0,.25);
-
-z-index:999;
-}
-
-
-
-/* =====================================
-RESPONSIVE
-===================================== */
-
-@media(max-width:950px){
-
-.services-grid{
-
-grid-template-columns:
-repeat(2,1fr);
-}
-
-.why-grid{
-
-grid-template-columns:
-repeat(2,1fr);
-}
-
-.centre-wrap{
-
-grid-template-columns:1fr;
+.exam-grid{
+    grid-template-columns:repeat(2,1fr);
 }
 
 }
 
+@media(max-width:600px){
 
-
-@media(max-width:760px){
-
-.brand{
-
-font-size:18px;
+.exam-grid{
+    grid-template-columns:1fr;
 }
 
-.nav-links{
-
-display:none;
-
-position:absolute;
-
-top:64px;
-
-left:0;
-
-width:100%;
-
-flex-direction:column;
-
-gap:0;
-
-background:#06356d;
-
-padding:
-10px 0;
+.result-stats{
+    grid-template-columns:repeat(2,1fr);
 }
 
-.nav-links.show{
-
-display:flex;
+.question-area,
+.test-start,
+.test-result{
+    padding:18px;
 }
 
-.nav-links a{
-
-width:100%;
-
-text-align:center;
-
-padding:13px;
-}
-
-.menu-btn{
-
-display:block;
-}
-
-.hero{
-
-min-height:auto;
-
-padding:
-35px 15px;
-}
-
-.hero-logo{
-
-width:90px;
-
-height:90px;
-}
-
-.hero h1{
-
-font-size:29px;
-}
-
-.tagline{
-
-font-size:16px;
-}
-
-.hero-address{
-
-font-size:13px;
-}
-
-.services-grid{
-
-grid-template-columns:1fr;
-}
-
-.result-grid{
-
-grid-template-columns:
-repeat(2,1fr);
-}
-
-.pdf-grid{
-
-grid-template-columns:1fr;
-}
-
-.section{
-
-padding:
-48px 0;
-}
-
-}
-
-
-
-@media(max-width:500px){
-
-.hero h1{
-
-font-size:26px;
-}
-
-.hero-buttons{
-
-flex-direction:column;
-
-align-items:center;
-}
-
-.hero-btn{
-
-width:100%;
-
-max-width:270px;
-}
-
-.why-grid{
-
-grid-template-columns:1fr;
-}
-
-.centre-image img{
-
-height:250px;
-}
-
-.contact-buttons{
-
-flex-direction:column;
-}
-
-.contact-buttons a{
-
-width:100%;
-}
-
-.exam-start,
-.exam-area,
-.result-box{
-
-padding:20px;
+.mock-heading h2{
+    font-size:27px;
 }
 
 }
 
 </style>
 
-</head>
 
+<section class="mock-system" id="mocktest">
 
+<div class="mock-container">
 
-<body>
+<div class="mock-heading">
 
-
-
-<!-- =====================================
-NAVBAR
-===================================== -->
-
-<nav class="navbar">
-
-<div class="container nav-wrap">
-
-
-<a
-href="#home"
-class="brand">
-
-<img
-src="logo.jpg"
-alt="Aman Online Centre Logo">
-
-AMAN ONLINE CENTRE
-
-</a>
-
-
-<button
-class="menu-btn"
-onclick="toggleMenu()">
-
-☰
-
-</button>
-
-
-<div
-class="nav-links"
-id="navLinks">
-
-
-<a href="#home">
-HOME
-</a>
-
-
-<a href="#services">
-SERVICES
-</a>
-
-
-<a href="#mocktest">
-MOCK TEST
-</a>
-
-
-<a href="#pdf">
-PDF
-</a>
-
-
-<a href="#why">
-WHY US
-</a>
-
-
-<a href="#centre">
-CENTRE
-</a>
-
-
-<a href="#about">
-ABOUT
-</a>
-
-
-<a href="#contact">
-CONTACT
-</a>
-
-
-<a
-href="tel:7992332267"
-class="nav-call">
-
-☎ 7992332267
-
-</a>
-
-
-</div>
-
-</div>
-
-</nav>
-
-
-
-<!-- =====================================
-HERO
-===================================== -->
-
-<header
-class="hero"
-id="home">
-
-
-<div class="hero-content">
-
-
-<img
-src="logo.jpg"
-class="hero-logo"
-alt="Aman Online Centre">
-
-
-<h1>
-AMAN ONLINE CENTRE
-</h1>
-
-
-<p class="tagline">
-
-आपकी डिजिटल एवं ऑनलाइन सेवाओं का
-विश्वसनीय केंद्र
-
-</p>
-
-
-<p class="seo-tagline">
-
-Online Centre in Kharik Bazar,
-Bhagalpur | Digital & Online Services
-
-</p>
-
-
-<p class="hero-address">
-
-📍 Ganinath Mandir Road,
-Pani Tanki Ke Samne,
-Kharik Bazar,
-Bhagalpur, Bihar
-
-</p>
-
-
-<div class="hero-buttons">
-
-
-<a
-href="#services"
-class="hero-btn services-btn">
-
-▦ हमारी सेवाएँ देखें
-
-</a>
-
-
-<a
-href="#mocktest"
-class="hero-btn services-btn">
-
-📝 Mock Test दें
-
-</a>
-
-
-<a
-href="https://wa.me/917992332267"
-class="hero-btn whatsapp-btn">
-
-● WhatsApp करें
-
-</a>
-
-
-<a
-href="tel:7992332267"
-class="hero-btn call-btn">
-
-☎ Call Now
-
-</a>
-
-
-</div>
-
-</div>
-
-</header>
-
-
-
-<!-- =====================================
-SERVICES
-===================================== -->
-
-<section
-class="section services-section"
-id="services">
-
-
-<div class="container">
-
-
-<div class="section-title">
-
-<h2>
-हमारी सेवाएँ
-</h2>
+<h2>🎯 Online Mock Test Series</h2>
 
 <p>
-अपनी जरूरत की सेवा Search करें
+अपना Exam चुनें • Free Test दें • Result देखें • PDF Download करें
 </p>
 
 </div>
 
 
-
-<div class="service-search">
-
+<div class="exam-search">
 
 <input
 type="text"
-
-id="serviceSearch"
-
-placeholder="🔍 सेवा खोजें — PAN, Job, GST, Mobile..."
-
-onkeyup="searchServices()">
-
-
-<span class="search-icon">
-⌕
-</span>
-
+id="examSearch"
+placeholder="🔍 Exam खोजें — Bihar Police, SSC, Railway..."
+onkeyup="searchExam()">
 
 </div>
 
 
-<div
-class="no-result"
-id="noResult">
+<div class="exam-grid" id="examGrid"></div>
 
-यह सेवा नहीं मिली।
-WhatsApp पर संपर्क करें।
 
-</div>
+<!-- TEST SCREEN -->
 
+<div class="test-screen" id="testScreen">
 
+<div class="test-header">
 
-<div
-class="services-grid">
-
-
-<div class="service-card">
-
-<div class="service-icon">
-🪪
-</div>
-
-<div>
-
-<h3>
-PAN Card
-</h3>
-
-<p>
-PAN Card संबंधित ऑनलाइन सेवाएँ।
-</p>
-
-</div>
-
-</div>
-
-
-
-<div class="service-card">
-
-<div class="service-icon">
-🗳️
-</div>
-
-<div>
-
-<h3>
-Voter Card
-</h3>
-
-<p>
-Voter Card संबंधित ऑनलाइन सेवाएँ।
-</p>
-
-</div>
-
-</div>
-
-
-
-<div class="service-card">
-
-<div class="service-icon">
-🚗
-</div>
-
-<div>
-
-<h3>
-Driving Licence
-</h3>
-
-<p>
-Driving Licence संबंधित ऑनलाइन कार्य।
-</p>
-
-</div>
-
-</div>
-
-
-
-<div class="service-card">
-
-<div class="service-icon">
-📝
-</div>
-
-<div>
-
-<h3>
-सरकारी एवं गैर-सरकारी Job Form
-</h3>
-
-<p>
-
-सभी प्रकार के सरकारी एवं
-गैर-सरकारी नौकरी के Online Form
-भरे जाते हैं।
-
-</p>
-
-</div>
-
-</div>
-
-
-
-<div class="service-card">
-
-<div class="service-icon">
-📄
-</div>
-
-<div>
-
-<h3>
-जाति, आय एवं निवास
-</h3>
-
-<p>
-प्रमाण पत्र संबंधित ऑनलाइन कार्य।
-</p>
-
-</div>
-
-</div>
-
-
-
-<div class="service-card">
-
-<div class="service-icon">
-🏠
-</div>
-
-<div>
-
-<h3>
-जमीन संबंधित कार्य
-</h3>
-
-<p>
-जमीन रसीद, Mutation,
-Parimarjan एवं अन्य कार्य।
-</p>
-
-</div>
-
-</div>
-
-
-
-<div class="service-card">
-
-<div class="service-icon">
-📋
-</div>
-
-<div>
-
-<h3>
-राशन कार्ड
-</h3>
-
-<p>
-Ration Card संबंधित सेवाएँ।
-</p>
-
-</div>
-
-</div>
-
-
-
-<div class="service-card">
-
-<div class="service-icon">
-🏥
-</div>
-
-<div>
-
-<h3>
-आयुष्मान कार्ड
-</h3>
-
-<p>
-Ayushman Card संबंधित सेवाएँ।
-</p>
-
-</div>
-
-</div>
-
-
-
-<div class="service-card">
-
-<div class="service-icon">
-🌐
-</div>
-
-<div>
-
-<h3>
-Passport
-</h3>
-
-<p>
-Passport Online Application सहायता।
-</p>
-
-</div>
-
-</div>
-
-
-
-<div class="service-card">
-
-<div class="service-icon">
-🌾
-</div>
-
-<div>
-
-<h3>
-किसान पंजीकरण
-</h3>
-
-<p>
-Kisan Panjikaran संबंधित कार्य।
-</p>
-
-</div>
-
-</div>
-
-
-
-<div class="service-card">
-
-<div class="service-icon">
-👴
-</div>
-
-<div>
-
-<h3>
-वृद्धा पेंशन
-</h3>
-
-<p>
-पेंशन संबंधित ऑनलाइन सहायता।
-</p>
-
-</div>
-
-</div>
-
-
-
-<div class="service-card">
-
-<div class="service-icon">
-🏦
-</div>
-
-<div>
-
-<h3>
-Airtel Payment Bank
-</h3>
-
-<p>
-Payment Bank संबंधित सेवाएँ।
-</p>
-
-</div>
-
-</div>
-
-
-
-<div class="service-card">
-
-<div class="service-icon">
-💰
-</div>
-
-<div>
-
-<h3>
-ITR Return
-</h3>
-
-<p>
-Income Tax Return Filing सेवा।
-</p>
-
-</div>
-
-</div>
-
-
-
-<div class="service-card">
-
-<div class="service-icon">
-🧾
-</div>
-
-<div>
-
-<h3>
-GST Services
-</h3>
-
-<p>
-GST Registration एवं Return Filing।
-</p>
-
-</div>
-
-</div>
-
-
-
-<div class="service-card">
-
-<div class="service-icon">
-📱
-</div>
-
-<div>
-
-<h3>
-Mobile Repairing
-</h3>
-
-<p>
-Mobile Repairing संबंधित सेवाएँ।
-</p>
-
-</div>
-
-</div>
-
-
-
-<div class="service-card">
-
-<div class="service-icon">
-💻
-</div>
-
-<div>
-
-<h3>
-Laptop / Desktop
-</h3>
-
-<p>
-Hardware एवं Software Service।
-</p>
-
-</div>
-
-</div>
-
-
-
-<div class="service-card">
-
-<div class="service-icon">
-🖨️
-</div>
-
-<div>
-
-<h3>
-Photocopy & Lamination
-</h3>
-
-<p>
-A4/A3 Photocopy एवं Lamination।
-</p>
-
-</div>
-
-</div>
-
-
-
-<div class="service-card">
-
-<div class="service-icon">
-📷
-</div>
-
-<div>
-
-<h3>
-Photograph
-</h3>
-
-<p>
-Passport Size एवं अन्य फोटो।
-</p>
-
-</div>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- =====================================
-MOCK TEST
-===================================== -->
-
-<section
-class="exam-section"
-id="mocktest">
-
-
-<div class="container">
-
-
-<div class="section-title">
-
-<h2>
-📝 Online Mock Test
+<h2 id="selectedExamTitle">
+Mock Test
 </h2>
 
-<p>
-Test दें और तुरंत Result देखें
-</p>
+<p id="selectedExamInfo"></p>
 
 </div>
 
 
-<div class="exam-wrapper">
+<div class="test-start" id="testStart">
 
-
-<div class="exam-header">
-
-<h2>
-Aman Online Centre Mock Test
-</h2>
-
-<p>
-10 Questions • 10 Minutes • 1 Mark Each
-</p>
-
-</div>
-
-
-
-<div
-class="exam-start"
-id="examStart">
-
-
-<h3>
-विद्यार्थी का नाम
-</h3>
-
+<h3>👤 Candidate Details</h3>
 
 <input
 type="text"
-
-id="studentName"
-
-placeholder="अपना नाम लिखें">
-
+id="candidateInput"
+placeholder="अपना पूरा नाम लिखें">
 
 <br>
 
-
 <button
-class="start-test-btn"
+class="begin-btn"
+onclick="beginTest()">
 
-onclick="startTest()">
-
-▶ Test Start करें
+▶ Start Test
 
 </button>
 
+<button
+class="close-test"
+onclick="closeTest()">
+
+✕ Close
+
+</button>
 
 </div>
 
 
+<!-- QUESTIONS -->
 
-<div
-class="exam-area"
-id="examArea">
-
+<div class="question-area" id="questionArea">
 
 <div class="exam-info">
 
+<span id="candidateDisplay"></span>
 
-<span
-id="candidateName">
-</span>
+<span id="questionNumber"></span>
 
-
-<span>
-
-प्रश्न:
-
-<span id="questionCounter">
-</span>
-
-</span>
-
-
-<span class="timer">
+<span class="exam-timer">
 
 ⏱
-
-<span id="timer">
-10:00
-</span>
+<span id="examTimer"></span>
 
 </span>
-
 
 </div>
 
 
-<div class="progress-track">
+<div class="progress-bg">
 
 <div
-class="progress-bar"
-id="progressBar">
+class="progress-fill"
+id="testProgress">
 </div>
 
 </div>
 
 
 <div
-class="question-box"
-id="questionBox">
+class="question-card"
+id="questionCard">
 </div>
 
 
-<div class="exam-navigation">
-
+<div class="test-navigation">
 
 <button
-class="exam-nav-btn prev-btn"
-
-onclick="previousQuestion()">
+class="nav-test-btn previous-btn"
+onclick="previousExamQuestion()">
 
 ← Previous
 
@@ -2479,78 +551,59 @@ onclick="previousQuestion()">
 
 
 <button
-class="exam-nav-btn next-btn"
-
-id="nextButton"
-
-onclick="nextQuestion()">
+class="nav-test-btn next-btn"
+id="nextExamButton"
+onclick="nextExamQuestion()">
 
 Next →
 
 </button>
-
 
 </div>
 
 
 <div
 class="question-palette"
-id="questionPalette">
+id="testPalette">
+</div>
+
 </div>
 
 
-</div>
-
-
+<!-- RESULT -->
 
 <div
-class="result-box"
-id="resultBox">
+class="test-result"
+id="testResult">
+
+<h2>🎉 आपका Result</h2>
+
+<h3 id="resultCandidate"></h3>
+
+<p id="resultExam"></p>
 
 
-<h2>
-🎉 Mock Test Result
-</h2>
+<div class="score-circle">
 
-
-<h3
-id="resultName">
-</h3>
-
-
-<div class="result-score">
-
-
-<strong
-id="scoreText">
-
-0/10
-
+<strong id="finalScore">
+0
 </strong>
 
-
-<span
-id="percentageText">
-
+<span id="finalPercentage">
 0%
-
 </span>
-
 
 </div>
 
 
-<h2
-id="resultStatus">
-</h2>
+<h2 id="performanceMessage"></h2>
 
 
-<div class="result-grid">
+<div class="result-stats">
 
+<div class="result-item">
 
-<div class="result-stat">
-
-<strong id="correctCount">
+<strong id="correctAnswers">
 0
 </strong>
 
@@ -2559,9 +612,9 @@ id="resultStatus">
 </div>
 
 
-<div class="result-stat">
+<div class="result-item">
 
-<strong id="wrongCount">
+<strong id="wrongAnswers">
 0
 </strong>
 
@@ -2570,9 +623,9 @@ id="resultStatus">
 </div>
 
 
-<div class="result-stat">
+<div class="result-item">
 
-<strong id="unansweredCount">
+<strong id="notAnswered">
 0
 </strong>
 
@@ -2581,926 +634,772 @@ id="resultStatus">
 </div>
 
 
-<div class="result-stat">
+<div class="result-item">
 
-<strong id="totalCount">
-10
+<strong id="totalQuestions">
+0
 </strong>
 
 📝 कुल
 
 </div>
 
-
 </div>
 
 
 <div
-class="review-box"
+class="answer-review"
 id="answerReview">
 </div>
 
 
 <button
-class="restart-btn"
-
-onclick="restartTest()">
+class="restart-test"
+onclick="restartCurrentTest()">
 
 🔄 फिर से Test दें
 
 </button>
 
-
 </div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- =====================================
-PDF SECTION
-===================================== -->
-
-<section
-class="pdf-section"
-id="pdf">
-
-
-<div class="container">
-
-
-<div class="section-title">
-
-<h2>
-📚 PDF Study Material
-</h2>
-
-<p>
-Notes, Question Paper एवं Answer Key
-</p>
-
-</div>
-
-
-<div class="pdf-grid">
-
-
-
-<div class="pdf-card">
-
-
-<div class="pdf-icon">
-📕
-</div>
-
-
-<h3>
-Mock Test Question PDF
-</h3>
-
-
-<p>
-Practice Question Paper
-</p>
-
-
-<a
-href="mock-test.pdf"
-target="_blank"
-class="pdf-btn pdf-view">
-
-👁 View PDF
-
-</a>
-
-
-<a
-href="mock-test.pdf"
-download
-class="pdf-btn pdf-download">
-
-⬇ Download
-
-</a>
-
-
-</div>
-
-
-
-<div class="pdf-card">
-
-
-<div class="pdf-icon">
-📘
-</div>
-
-
-<h3>
-Study Notes
-</h3>
-
-
-<p>
-विद्यार्थियों के लिए Study Material
-</p>
-
-
-<a
-href="study-notes.pdf"
-target="_blank"
-class="pdf-btn pdf-view">
-
-👁 View PDF
-
-</a>
-
-
-<a
-href="study-notes.pdf"
-download
-class="pdf-btn pdf-download">
-
-⬇ Download
-
-</a>
-
-
-</div>
-
-
-
-<div class="pdf-card">
-
-
-<div class="pdf-icon">
-📗
-</div>
-
-
-<h3>
-Answer Key
-</h3>
-
-
-<p>
-Mock Test Answer Key
-</p>
-
-
-<a
-href="answer-key.pdf"
-target="_blank"
-class="pdf-btn pdf-view">
-
-👁 View PDF
-
-</a>
-
-
-<a
-href="answer-key.pdf"
-download
-class="pdf-btn pdf-download">
-
-⬇ Download
-
-</a>
-
-
-</div>
-
 
 </div>
 
 </div>
 
 </section>
-
-
-
-<!-- =====================================
-WHY US
-===================================== -->
-
-<section
-class="why-section"
-id="why">
-
-
-<div class="container">
-
-
-<div class="section-title">
-
-<h2>
-Why Choose Us?
-</h2>
-
-<p>
-विश्वसनीय, सरल और सुविधाजनक सेवा
-</p>
-
-</div>
-
-
-<div class="why-grid">
-
-
-<div class="why-box">
-
-<div class="why-icon">
-⚡
-</div>
-
-<h3>
-Fast Service
-</h3>
-
-<p>
-तेज और सुविधाजनक सेवा।
-</p>
-
-</div>
-
-
-<div class="why-box">
-
-<div class="why-icon">
-🤝
-</div>
-
-<h3>
-Trusted Support
-</h3>
-
-<p>
-सही जानकारी और सहयोग।
-</p>
-
-</div>
-
-
-<div class="why-box">
-
-<div class="why-icon">
-💻
-</div>
-
-<h3>
-Multiple Services
-</h3>
-
-<p>
-एक ही जगह कई सेवाएँ।
-</p>
-
-</div>
-
-
-<div class="why-box">
-
-<div class="why-icon">
-📍
-</div>
-
-<h3>
-Easy Location
-</h3>
-
-<p>
-खरीक बाजार में सुविधाजनक स्थान।
-</p>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- =====================================
-OUR CENTRE
-===================================== -->
-
-<section
-class="section centre-section"
-id="centre">
-
-
-<div class="container centre-wrap">
-
-
-<div class="centre-image">
-
-<img
-src="Shop.jpg"
-
-alt="Aman Online Centre Shop">
-
-</div>
-
-
-<div class="centre-content">
-
-
-<h2>
-हमारे केंद्र पर आएँ
-</h2>
-
-
-<p>
-
-Aman Online Centre में Digital,
-Online एवं Computer संबंधित
-विभिन्न सेवाएँ उपलब्ध हैं।
-
-</p>
-
-
-<p>
-
-<strong>
-पता:
-</strong>
-
-<br>
-
-Ganinath Mandir Road,
-
-<br>
-
-Pani Tanki Ke Samne,
-
-<br>
-
-Kharik Bazar,
-
-Bhagalpur, Bihar
-
-</p>
-
-
-<p>
-
-☎ <strong>
-7992332267
-</strong>
-
-<br>
-
-☎ <strong>
-9570619087
-</strong>
-
-</p>
-
-
-<a
-href="https://maps.app.goo.gl/sC8u6T7jhacEhj3o7?g_st=aw"
-
-target="_blank"
-
-class="location-btn">
-
-📍 Google Maps पर Location देखें
-
-</a>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- =====================================
-ABOUT
-===================================== -->
-
-<section
-class="section about-section"
-id="about">
-
-
-<div class="container">
-
-
-<div class="section-title">
-
-<h2>
-हमारे बारे में
-</h2>
-
-<p>
-Aman Online Centre – Kharik Bazar
-</p>
-
-</div>
-
-
-<div class="about-box">
-
-<p>
-
-Aman Online Centre में ग्राहकों को
-विभिन्न Digital, Online एवं Computer
-संबंधित सेवाएँ सरल और सुविधाजनक
-तरीके से उपलब्ध कराई जाती हैं।
-
-हमारा उद्देश्य ग्राहकों को जरूरी
-ऑनलाइन सेवाओं के लिए विश्वसनीय
-सहायता प्रदान करना है।
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- =====================================
-CONTACT
-===================================== -->
-
-<section
-class="contact-section"
-id="contact">
-
-
-<div class="contact-content">
-
-
-<h2>
-Contact Us
-</h2>
-
-
-<p>
-
-<strong>
-AMAN ONLINE CENTRE
-</strong>
-
-</p>
-
-
-<p>
-
-📍 Ganinath Mandir Road,
-Pani Tanki Ke Samne,
-
-<br>
-
-Kharik Bazar,
-Bhagalpur, Bihar
-
-</p>
-
-
-<p>
-
-☎ 7992332267
-
-&nbsp; | &nbsp;
-
-☎ 9570619087
-
-</p>
-
-
-<div class="contact-buttons">
-
-
-<a
-href="https://wa.me/917992332267"
-
-class="contact-whatsapp">
-
-● WhatsApp करें
-
-</a>
-
-
-<a
-href="tel:7992332267"
-
-class="contact-call">
-
-☎ 7992332267
-
-</a>
-
-
-<a
-href="tel:9570619087"
-
-class="contact-call">
-
-☎ 9570619087
-
-</a>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<footer>
-
-© 2026 Aman Online Centre.
-All Rights Reserved.
-
-</footer>
-
-
-
-<a
-href="https://wa.me/917992332267"
-
-class="floating-whatsapp"
-
-title="WhatsApp">
-
-💬
-
-</a>
-
 
 
 <script>
 
-/* =====================================
-MOBILE MENU
-===================================== */
+/* =========================================================
+   EXAM DATABASE
+   नया Exam/Test मुख्य रूप से यहीं जोड़ना है
+========================================================= */
 
-function toggleMenu(){
+const examData = [
 
-document
-.getElementById("navLinks")
-.classList
-.toggle("show");
+{
+id:"bihar-police",
+name:"Bihar Police Constable",
+icon:"👮",
+time:120,
+pdf:"pdf/bihar-police-01.pdf",
 
+questions:[
+
+{
+q:"बिहार की राजधानी क्या है?",
+o:["गया","पटना","भागलपुर","दरभंगा"],
+a:1
+},
+
+{
+q:"बिहार दिवस कब मनाया जाता है?",
+o:["22 मार्च","15 अगस्त","26 जनवरी","2 अक्टूबर"],
+a:0
+},
+
+{
+q:"चंपारण सत्याग्रह किस वर्ष हुआ था?",
+o:["1915","1917","1920","1930"],
+a:1
+},
+
+{
+q:"भारत का संविधान कब लागू हुआ?",
+o:["15 अगस्त 1947","26 जनवरी 1950","26 नवंबर 1949","2 अक्टूबर 1950"],
+a:1
+},
+
+{
+q:"मानव शरीर में रक्त को पंप कौन करता है?",
+o:["फेफड़ा","हृदय","मस्तिष्क","गुर्दा"],
+a:1
+},
+
+{
+q:"25 + 35 कितना होगा?",
+o:["50","60","70","80"],
+a:1
+},
+
+{
+q:"भारत का राष्ट्रीय पशु कौन है?",
+o:["हाथी","बाघ","शेर","घोड़ा"],
+a:1
+},
+
+{
+q:"पानी का रासायनिक सूत्र क्या है?",
+o:["CO2","H2O","O2","NaCl"],
+a:1
+},
+
+{
+q:"Computer का Brain किसे कहा जाता है?",
+o:["Monitor","CPU","Mouse","Keyboard"],
+a:1
+},
+
+{
+q:"WWW का पूरा नाम क्या है?",
+o:["World Wide Web","Wide World Web","World Web Window","Web World Wide"],
+a:0
 }
 
+]
 
-document
-.querySelectorAll(".nav-links a")
-.forEach(function(link){
-
-link.addEventListener(
-"click",
-function(){
-
-document
-.getElementById("navLinks")
-.classList
-.remove("show");
-
-});
-
-});
+},
 
 
+/* =========================
+   BIHAR POLICE SI
+========================= */
 
-/* =====================================
-SERVICE SEARCH
-===================================== */
+{
+id:"bihar-si",
+name:"Bihar Police SI",
+icon:"⭐",
+time:120,
+pdf:"pdf/bihar-si-01.pdf",
 
-function searchServices(){
+questions:[
 
-let input =
+{
+q:"भारतीय संविधान की प्रारूप समिति के अध्यक्ष कौन थे?",
+o:["राजेंद्र प्रसाद","बी. आर. अंबेडकर","जवाहरलाल नेहरू","सरदार पटेल"],
+a:1
+},
 
-document
-.getElementById("serviceSearch")
-.value
-.toLowerCase()
-.trim();
+{
+q:"भारत का सर्वोच्च न्यायालय कहाँ स्थित है?",
+o:["पटना","मुंबई","नई दिल्ली","कोलकाता"],
+a:2
+},
 
+{
+q:"राज्यसभा को क्या कहा जाता है?",
+o:["निम्न सदन","उच्च सदन","लोक सदन","जन सदन"],
+a:1
+},
 
-let cards =
+{
+q:"भारत में मतदान की न्यूनतम आयु कितनी है?",
+o:["16","18","21","25"],
+a:1
+},
 
-document
-.querySelectorAll(".service-card");
-
-
-let found = false;
-
-
-cards.forEach(function(card){
-
-let text =
-
-card
-.innerText
-.toLowerCase();
-
-
-if(text.includes(input)){
-
-card.style.display="flex";
-
-found=true;
-
+{
+q:"भारत का संवैधानिक प्रमुख कौन होता है?",
+o:["प्रधानमंत्री","राष्ट्रपति","मुख्य न्यायाधीश","गृह मंत्री"],
+a:1
 }
 
-else{
+]
 
-card.style.display="none";
+},
 
+
+/* =========================
+   BSSC
+========================= */
+
+{
+id:"bssc",
+name:"BSSC",
+icon:"🏛️",
+time:120,
+pdf:"pdf/bssc-01.pdf",
+
+questions:[
+
+{
+q:"विक्रमशिला विश्वविद्यालय की स्थापना किसने की थी?",
+o:["अशोक","धर्मपाल","हर्ष","चंद्रगुप्त"],
+a:1
+},
+
+{
+q:"शेरशाह सूरी का मकबरा कहाँ है?",
+o:["सासाराम","गया","पटना","बक्सर"],
+a:0
+},
+
+{
+q:"सोन नदी किसकी सहायक नदी है?",
+o:["यमुना","गंगा","कोसी","गंडक"],
+a:1
+},
+
+{
+q:"राजगीर किस जिले में स्थित है?",
+o:["गया","पटना","नालंदा","वैशाली"],
+a:2
+},
+
+{
+q:"कोसी नदी को किस नाम से जाना जाता है?",
+o:["बिहार का शोक","दक्षिण गंगा","बिहार की जीवनरेखा","नीली नदी"],
+a:0
 }
 
-});
+]
+
+},
 
 
-document
-.getElementById("noResult")
-.style.display =
+/* =========================
+   SSC CGL
+========================= */
 
-found
-?
-"none"
-:
-"block";
+{
+id:"ssc-cgl",
+name:"SSC CGL",
+icon:"📚",
+time:60,
+pdf:"pdf/ssc-cgl-01.pdf",
 
+questions:[
+
+{
+q:"√144 का मान क्या है?",
+o:["10","11","12","14"],
+a:2
+},
+
+{
+q:"500 का 20 प्रतिशत कितना है?",
+o:["50","100","150","200"],
+a:1
+},
+
+{
+q:"15 का वर्ग कितना है?",
+o:["125","225","250","215"],
+a:1
+},
+
+{
+q:"What is the synonym of Big?",
+o:["Small","Large","Thin","Short"],
+a:1
+},
+
+{
+q:"Past tense of Go is:",
+o:["Goed","Went","Gone","Going"],
+a:1
 }
 
-
-
-/* =====================================
-MOCK TEST QUESTIONS
-===================================== */
-
-const questions = [
-
-
-{
-
-question:
-"भारत की राजधानी क्या है?",
-
-options:[
-
-"मुंबई",
-
-"नई दिल्ली",
-
-"पटना",
-
-"कोलकाता"
-
-],
-
-answer:1
+]
 
 },
 
 
+/* =========================
+   SSC CHSL
+========================= */
+
 {
+id:"ssc-chsl",
+name:"SSC CHSL",
+icon:"📝",
+time:60,
+pdf:"pdf/ssc-chsl-01.pdf",
 
-question:
-"बिहार की राजधानी क्या है?",
+questions:[
 
-options:[
-
-"भागलपुर",
-
-"गया",
-
-"पटना",
-
-"मुजफ्फरपुर"
-
-],
-
-answer:2
-
+{
+q:"1 किलोमीटर में कितने मीटर होते हैं?",
+o:["100","500","1000","1500"],
+a:2
 },
 
-
 {
-
-question:
-"भारत का राष्ट्रीय पशु कौन है?",
-
-options:[
-
-"हाथी",
-
-"शेर",
-
-"बाघ",
-
-"घोड़ा"
-
-],
-
-answer:2
-
+q:"3/4 का दशमलव रूप क्या है?",
+o:["0.25","0.50","0.75","1.25"],
+a:2
 },
 
-
 {
-
-question:
-"भारत का राष्ट्रीय पक्षी कौन है?",
-
-options:[
-
-"तोता",
-
-"मोर",
-
-"कबूतर",
-
-"कोयल"
-
-],
-
-answer:1
-
+q:"एक दर्जन में कितनी वस्तुएँ होती हैं?",
+o:["10","12","14","16"],
+a:1
 },
 
-
 {
-
-question:
-"भारत का संविधान कब लागू हुआ?",
-
-options:[
-
-"15 अगस्त 1947",
-
-"26 जनवरी 1950",
-
-"2 अक्टूबर 1950",
-
-"26 नवंबर 1947"
-
-],
-
-answer:1
-
+q:"Opposite of Hot is:",
+o:["Warm","Cold","Heat","Boil"],
+a:1
 },
 
-
 {
-
-question:
-"1 किलोमीटर में कितने मीटर होते हैं?",
-
-options:[
-
-"100",
-
-"500",
-
-"1000",
-
-"1500"
-
-],
-
-answer:2
-
-},
-
-
-{
-
-question:
-"Computer का Brain किसे कहा जाता है?",
-
-options:[
-
-"Mouse",
-
-"Keyboard",
-
-"CPU",
-
-"Monitor"
-
-],
-
-answer:2
-
-},
-
-
-{
-
-question:
-"WWW का पूरा नाम क्या है?",
-
-options:[
-
-"World Wide Web",
-
-"World Web Window",
-
-"Wide World Web",
-
-"Web World Wide"
-
-],
-
-answer:0
-
-},
-
-
-{
-
-question:
-"भारत का राष्ट्रीय ध्वज कितने रंगों का है?",
-
-options:[
-
-"2",
-
-"3",
-
-"4",
-
-"5"
-
-],
-
-answer:1
-
-},
-
-
-{
-
-question:
-"15 + 25 कितना होता है?",
-
-options:[
-
-"35",
-
-"40",
-
-"45",
-
-"50"
-
-],
-
-answer:1
-
+q:"Plural of Child is:",
+o:["Childs","Children","Childes","Childrens"],
+a:1
 }
 
+]
+
+},
+
+
+/* =========================
+   SSC MTS
+========================= */
+
+{
+id:"ssc-mts",
+name:"SSC MTS",
+icon:"📋",
+time:90,
+pdf:"pdf/ssc-mts-01.pdf",
+
+questions:[
+
+{
+q:"100 - 47 कितना है?",
+o:["53","57","63","43"],
+a:0
+},
+
+{
+q:"12 × 8 कितना है?",
+o:["86","96","108","88"],
+a:1
+},
+
+{
+q:"1 घंटे में कितने मिनट होते हैं?",
+o:["30","45","60","90"],
+a:2
+},
+
+{
+q:"'जल' का पर्यायवाची क्या है?",
+o:["नीर","अग्नि","वायु","आकाश"],
+a:0
+},
+
+{
+q:"'लाभ' का विलोम क्या है?",
+o:["धन","हानि","आय","फायदा"],
+a:1
+}
+
+]
+
+},
+
+
+/* =========================
+   RAILWAY NTPC
+========================= */
+
+{
+id:"railway-ntpc",
+name:"Railway NTPC",
+icon:"🚆",
+time:90,
+pdf:"pdf/railway-ntpc-01.pdf",
+
+questions:[
+
+{
+q:"विद्युत धारा की SI इकाई क्या है?",
+o:["वोल्ट","एम्पियर","वाट","ओम"],
+a:1
+},
+
+{
+q:"बल की SI इकाई क्या है?",
+o:["जूल","न्यूटन","वाट","मीटर"],
+a:1
+},
+
+{
+q:"कार्य की SI इकाई क्या है?",
+o:["जूल","न्यूटन","एम्पियर","वोल्ट"],
+a:0
+},
+
+{
+q:"पृथ्वी का प्राकृतिक उपग्रह कौन है?",
+o:["सूर्य","चंद्रमा","मंगल","शुक्र"],
+a:1
+},
+
+{
+q:"अरब सागर भारत के किस ओर है?",
+o:["पूर्व","पश्चिम","उत्तर","दक्षिण"],
+a:1
+}
+
+]
+
+},
+
+
+/* =========================
+   RAILWAY GROUP D
+========================= */
+
+{
+id:"railway-group-d",
+name:"Railway Group D",
+icon:"🚉",
+time:90,
+pdf:"pdf/railway-group-d-01.pdf",
+
+questions:[
+
+{
+q:"विटामिन C की कमी से कौन सा रोग होता है?",
+o:["रिकेट्स","स्कर्वी","रातांधता","बेरी-बेरी"],
+a:1
+},
+
+{
+q:"विटामिन D की कमी से कौन सा रोग होता है?",
+o:["स्कर्वी","रिकेट्स","एनीमिया","बेरी-बेरी"],
+a:1
+},
+
+{
+q:"मानव शरीर में कितनी हड्डियाँ होती हैं?",
+o:["206","208","210","212"],
+a:0
+},
+
+{
+q:"पौधे भोजन किस प्रक्रिया से बनाते हैं?",
+o:["श्वसन","प्रकाश संश्लेषण","पाचन","वाष्पीकरण"],
+a:1
+},
+
+{
+q:"ऑक्सीजन का रासायनिक संकेत क्या है?",
+o:["O","H","N","C"],
+a:0
+}
+
+]
+
+},
+
+
+/* =========================
+   BIHAR HOME GUARD
+========================= */
+
+{
+id:"home-guard",
+name:"Bihar Home Guard",
+icon:"🛡️",
+time:60,
+pdf:"pdf/home-guard-01.pdf",
+
+questions:[
+
+{
+q:"भारत को स्वतंत्रता कब मिली?",
+o:["15 अगस्त 1947","26 जनवरी 1950","9 अगस्त 1942","2 अक्टूबर 1947"],
+a:0
+},
+
+{
+q:"भारत छोड़ो आंदोलन कब शुरू हुआ?",
+o:["1930","1942","1920","1947"],
+a:1
+},
+
+{
+q:"प्लासी का युद्ध कब हुआ?",
+o:["1757","1764","1857","1773"],
+a:0
+},
+
+{
+q:"बक्सर का युद्ध कब हुआ?",
+o:["1757","1764","1857","1942"],
+a:1
+},
+
+{
+q:"मौर्य साम्राज्य के संस्थापक कौन थे?",
+o:["अशोक","चंद्रगुप्त मौर्य","बिंदुसार","हर्ष"],
+a:1
+}
+
+]
+
+},
+
+
+/* =========================
+   BANKING
+========================= */
+
+{
+id:"banking",
+name:"Banking Exam",
+icon:"🏦",
+time:60,
+pdf:"pdf/banking-01.pdf",
+
+questions:[
+
+{
+q:"यदि 5 पेन की कीमत ₹50 है तो एक पेन की कीमत कितनी होगी?",
+o:["₹5","₹10","₹15","₹20"],
+a:1
+},
+
+{
+q:"200 का 10 प्रतिशत कितना है?",
+o:["10","20","30","40"],
+a:1
+},
+
+{
+q:"2 घंटे 30 मिनट में कितने मिनट होते हैं?",
+o:["120","130","150","180"],
+a:2
+},
+
+{
+q:"144 ÷ 12 कितना होगा?",
+o:["10","11","12","14"],
+a:2
+},
+
+{
+q:"2, 4, 6, 8 के बाद क्या आएगा?",
+o:["9","10","11","12"],
+a:1
+}
+
+]
+
+}
 
 ];
 
 
+/* =========================================================
+   SYSTEM VARIABLES
+========================================================= */
 
-let currentQuestion = 0;
+let activeExam = null;
 
-let answers =
-new Array(
-questions.length
-)
-.fill(null);
+let activeQuestion = 0;
 
-let timeLeft = 600;
+let userAnswers = [];
 
-let timerInterval;
+let remainingTime = 0;
+
+let examTimerInterval = null;
 
 
+/* =========================================================
+   CREATE EXAM CARDS AUTOMATICALLY
+========================================================= */
 
-function startTest(){
+function loadExamCards(){
 
-let name =
+const grid =
+document.getElementById("examGrid");
+
+grid.innerHTML="";
+
+
+examData.forEach(function(exam){
+
+let card =
+document.createElement("div");
+
+card.className="exam-card";
+
+card.innerHTML=`
+
+<div class="exam-icon">
+${exam.icon}
+</div>
+
+<h3>
+${exam.name}
+</h3>
+
+<div class="exam-meta">
+${exam.questions.length} Questions • ${exam.time} Minutes
+</div>
+
+<div class="exam-buttons">
+
+<button
+class="start-exam"
+onclick="selectExam('${exam.id}')">
+
+▶ Start Mock Test
+
+</button>
+
+<a
+class="view-pdf"
+href="${exam.pdf}"
+target="_blank">
+
+📄 View Question PDF
+
+</a>
+
+<a
+class="download-pdf"
+href="${exam.pdf}"
+download>
+
+⬇ Download PDF
+
+</a>
+
+</div>
+
+`;
+
+grid.appendChild(card);
+
+});
+
+}
+
+
+/* =========================================================
+   EXAM SEARCH
+========================================================= */
+
+function searchExam(){
+
+let search =
+document
+.getElementById("examSearch")
+.value
+.toLowerCase();
 
 document
-.getElementById("studentName")
+.querySelectorAll(".exam-card")
+.forEach(function(card){
+
+card.style.display =
+
+card.innerText
+.toLowerCase()
+.includes(search)
+
+?
+
+"block"
+
+:
+
+"none";
+
+});
+
+}
+
+
+/* =========================================================
+   SELECT EXAM
+========================================================= */
+
+function selectExam(id){
+
+activeExam =
+examData.find(
+exam => exam.id === id
+);
+
+activeQuestion = 0;
+
+userAnswers =
+new Array(
+activeExam.questions.length
+).fill(null);
+
+
+document
+.getElementById("selectedExamTitle")
+.innerText =
+
+activeExam.icon
++
+" "
++
+activeExam.name;
+
+
+document
+.getElementById("selectedExamInfo")
+.innerText =
+
+activeExam.questions.length
++
+" Questions • "
++
+activeExam.time
++
+" Minutes";
+
+
+document
+.getElementById("testScreen")
+.style.display="block";
+
+
+document
+.getElementById("testStart")
+.style.display="block";
+
+
+document
+.getElementById("questionArea")
+.style.display="none";
+
+
+document
+.getElementById("testResult")
+.style.display="none";
+
+
+document
+.getElementById("candidateInput")
+.value="";
+
+
+document
+.getElementById("testScreen")
+.scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+
+/* =========================================================
+   START TEST
+========================================================= */
+
+function beginTest(){
+
+let candidate =
+document
+.getElementById("candidateInput")
 .value
 .trim();
 
 
-if(name===""){
+if(candidate===""){
 
 alert(
 "कृपया अपना नाम लिखें।"
@@ -3512,93 +1411,83 @@ return;
 
 
 document
-.getElementById("candidateName")
+.getElementById("candidateDisplay")
 .innerText =
-
-"👤 " + name;
-
-
-document
-.getElementById("examStart")
-.style.display =
-"none";
+"👤 " + candidate;
 
 
 document
-.getElementById("examArea")
-.style.display =
-"block";
+.getElementById("testStart")
+.style.display="none";
 
 
-createPalette();
+document
+.getElementById("questionArea")
+.style.display="block";
 
-showQuestion();
 
-startTimer();
+remainingTime =
+activeExam.time * 60;
+
+
+createTestPalette();
+
+showExamQuestion();
+
+startExamTimer();
 
 }
 
 
+/* =========================================================
+   SHOW QUESTION
+========================================================= */
 
-function showQuestion(){
+function showExamQuestion(){
 
-let q =
-
-questions[
-currentQuestion
+let question =
+activeExam.questions[
+activeQuestion
 ];
 
 
 document
-.getElementById("questionCounter")
+.getElementById("questionNumber")
 .innerText =
 
-(currentQuestion + 1)
-
+"Question "
 +
-
+(activeQuestion + 1)
++
 " / "
-
 +
-
-questions.length;
-
-
-let html =
-
-'<div class="question-number">'
-
-+
-
-'Question '
-
-+
-
-(currentQuestion + 1)
-
-+
-
-'</div>'
-
-+
-
-'<div class="question-title">'
-
-+
-
-q.question
-
-+
-
-'</div>';
+activeExam.questions.length;
 
 
-q.options.forEach(
+let html = `
+
+<div class="question-no">
+
+Question ${activeQuestion + 1}
+
+</div>
+
+<div class="question-text">
+
+${question.q}
+
+</div>
+
+`;
+
+
+question.o.forEach(
 function(option,index){
 
 let checked =
 
-answers[currentQuestion] === index
+userAnswers[activeQuestion]
+=== index
 
 ?
 
@@ -3609,132 +1498,115 @@ answers[currentQuestion] === index
 "";
 
 
-html +=
+html += `
 
-'<label class="option">'
+<label class="answer-option">
 
-+
+<input
+type="radio"
+name="mockAnswer"
+${checked}
 
-'<input type="radio" name="answer" value="'
+onchange="saveExamAnswer(${index})">
 
-+
+${String.fromCharCode(65+index)}.
+${option}
 
-index
+</label>
 
-+
-
-'" '
-
-+
-
-checked
-
-+
-
-' onchange="saveAnswer('
-
-+
-
-index
-
-+
-
-')">'
-
-+
-
-option
-
-+
-
-'</label>';
+`;
 
 });
 
 
 document
-.getElementById("questionBox")
+.getElementById("questionCard")
 .innerHTML =
 html;
 
 
-updatePalette();
-
-
-let progress =
+let percentage =
 
 (
-(currentQuestion + 1)
+(activeQuestion + 1)
 
-/ questions.length
-)
+/ activeExam.questions.length
 
-* 100;
+) * 100;
 
 
 document
-.getElementById("progressBar")
+.getElementById("testProgress")
 .style.width =
 
-progress + "%";
+percentage + "%";
 
 
-let nextButton =
-
+let next =
 document
-.getElementById("nextButton");
+.getElementById("nextExamButton");
 
 
 if(
-currentQuestion
+activeQuestion
 ===
-questions.length - 1
+activeExam.questions.length - 1
 ){
 
-nextButton.innerText =
+next.innerText =
 "✓ Submit Test";
 
-nextButton.className =
-"exam-nav-btn submit-btn";
+next.className =
+"nav-test-btn final-submit";
 
 }
 
 else{
 
-nextButton.innerText =
+next.innerText =
 "Next →";
 
-nextButton.className =
-"exam-nav-btn next-btn";
-
-}
-
-}
-
-
-
-function saveAnswer(index){
-
-answers[currentQuestion] =
-index;
-
-updatePalette();
+next.className =
+"nav-test-btn next-btn";
 
 }
 
 
+updateTestPalette();
 
-function nextQuestion(){
+}
+
+
+/* =========================================================
+   SAVE ANSWER
+========================================================= */
+
+function saveExamAnswer(index){
+
+userAnswers[
+activeQuestion
+] = index;
+
+updateTestPalette();
+
+}
+
+
+/* =========================================================
+   NEXT
+========================================================= */
+
+function nextExamQuestion(){
 
 if(
-currentQuestion
+activeQuestion
 <
-questions.length - 1
+activeExam.questions.length - 1
 ){
 
-currentQuestion++;
+activeQuestion++;
 
-showQuestion();
+showExamQuestion();
 
 }
 
@@ -3742,11 +1614,11 @@ else{
 
 if(
 confirm(
-"क्या आप Test Submit करना चाहते हैं?"
+"क्या आप Mock Test Submit करना चाहते हैं?"
 )
 ){
 
-submitTest();
+finishExam();
 
 }
 
@@ -3755,108 +1627,98 @@ submitTest();
 }
 
 
+/* =========================================================
+   PREVIOUS
+========================================================= */
 
-function previousQuestion(){
+function previousExamQuestion(){
 
-if(
-currentQuestion > 0
-){
+if(activeQuestion > 0){
 
-currentQuestion--;
+activeQuestion--;
 
-showQuestion();
+showExamQuestion();
 
 }
 
 }
 
 
+/* =========================================================
+   PALETTE
+========================================================= */
 
-function createPalette(){
+function createTestPalette(){
 
 let palette =
-
 document
-.getElementById("questionPalette");
+.getElementById("testPalette");
+
+palette.innerHTML="";
 
 
-palette.innerHTML = "";
-
-
-questions.forEach(
-function(q,index){
+activeExam.questions
+.forEach(
+function(question,index){
 
 let button =
+document.createElement("button");
 
-document.createElement(
-"button"
-);
-
+button.className =
+"palette-question";
 
 button.innerText =
 index + 1;
 
-
-button.className =
-"palette-btn";
-
-
 button.onclick =
 function(){
 
-currentQuestion =
-index;
+activeQuestion=index;
 
-showQuestion();
+showExamQuestion();
 
 };
 
-
-palette
-.appendChild(
-button
-);
+palette.appendChild(button);
 
 });
 
 }
 
 
-
-function updatePalette(){
+function updateTestPalette(){
 
 let buttons =
-
 document
-.querySelectorAll(".palette-btn");
+.querySelectorAll(".palette-question");
 
 
 buttons.forEach(
 function(button,index){
 
 button.className =
-"palette-btn";
+"palette-question";
 
 
 if(
-answers[index]
+userAnswers[index]
 !== null
 ){
 
-button
-.classList
-.add("answered");
+button.classList.add(
+"done"
+);
 
 }
 
 
 if(
-index === currentQuestion
+index === activeQuestion
 ){
 
-button
-.classList
-.add("active");
+button.classList.add(
+"current"
+);
 
 }
 
@@ -3865,32 +1727,87 @@ button
 }
 
 
+/* =========================================================
+   TIMER
+========================================================= */
 
-function startTimer(){
+function startExamTimer(){
 
-timerInterval =
+clearInterval(
+examTimerInterval
+);
+
+
+updateTimerDisplay();
+
+
+examTimerInterval =
 
 setInterval(
 function(){
 
-timeLeft--;
+remainingTime--;
+
+updateTimerDisplay();
+
+
+if(
+remainingTime <= 0
+){
+
+clearInterval(
+examTimerInterval
+);
+
+alert(
+"समय समाप्त हो गया। आपका Test Submit किया जा रहा है।"
+);
+
+finishExam();
+
+}
+
+},
+1000
+);
+
+}
+
+
+function updateTimerDisplay(){
+
+let hours =
+Math.floor(
+remainingTime / 3600
+);
 
 
 let minutes =
-
 Math.floor(
-timeLeft / 60
+(remainingTime % 3600)
+/ 60
 );
 
 
 let seconds =
+remainingTime % 60;
 
-timeLeft % 60;
+
+let display="";
 
 
-document
-.getElementById("timer")
-.innerText =
+if(hours > 0){
+
+display +=
+String(hours)
+.padStart(2,"0")
++
+":";
+
+}
+
+
+display +=
 
 String(minutes)
 .padStart(2,"0")
@@ -3905,50 +1822,36 @@ String(seconds)
 .padStart(2,"0");
 
 
-if(
-timeLeft <= 0
-){
-
-clearInterval(
-timerInterval
-);
-
-alert(
-"समय समाप्त हो गया। Test Submit किया जा रहा है।"
-);
-
-submitTest();
-
-}
-
-},
-1000
-);
+document
+.getElementById("examTimer")
+.innerText =
+display;
 
 }
 
 
+/* =========================================================
+   FINISH + RESULT
+========================================================= */
 
-function submitTest(){
+function finishExam(){
 
 clearInterval(
-timerInterval
+examTimerInterval
 );
 
 
-let correct = 0;
+let correct=0;
 
-let wrong = 0;
+let wrong=0;
 
-let unanswered = 0;
+let unanswered=0;
 
 
-answers.forEach(
+userAnswers.forEach(
 function(answer,index){
 
-if(
-answer === null
-){
+if(answer === null){
 
 unanswered++;
 
@@ -3957,7 +1860,7 @@ unanswered++;
 else if(
 answer
 ===
-questions[index].answer
+activeExam.questions[index].a
 ){
 
 correct++;
@@ -3977,7 +1880,8 @@ let percentage =
 
 Math.round(
 
-(correct / questions.length)
+(correct /
+activeExam.questions.length)
 
 * 100
 
@@ -3985,132 +1889,144 @@ Math.round(
 
 
 document
-.getElementById("examArea")
-.style.display =
-"none";
+.getElementById("questionArea")
+.style.display="none";
 
 
 document
-.getElementById("resultBox")
-.style.display =
-"block";
+.getElementById("testResult")
+.style.display="block";
 
 
-let name =
+let candidate =
 
 document
-.getElementById("studentName")
+.getElementById("candidateInput")
 .value;
 
 
 document
-.getElementById("resultName")
+.getElementById("resultCandidate")
 .innerText =
 
-"विद्यार्थी: " + name;
+"👤 "
++
+candidate;
 
 
 document
-.getElementById("scoreText")
+.getElementById("resultExam")
+.innerText =
+
+activeExam.name;
+
+
+document
+.getElementById("finalScore")
 .innerText =
 
 correct
-
 +
-
 "/"
-
 +
-
-questions.length;
+activeExam.questions.length;
 
 
 document
-.getElementById("percentageText")
+.getElementById("finalPercentage")
 .innerText =
 
-percentage + "%";
+percentage
++
+"%";
 
 
 document
-.getElementById("correctCount")
+.getElementById("correctAnswers")
 .innerText =
 correct;
 
 
 document
-.getElementById("wrongCount")
+.getElementById("wrongAnswers")
 .innerText =
 wrong;
 
 
 document
-.getElementById("unansweredCount")
+.getElementById("notAnswered")
 .innerText =
 unanswered;
 
 
 document
-.getElementById("totalCount")
+.getElementById("totalQuestions")
 .innerText =
-questions.length;
+
+activeExam.questions.length;
 
 
-let status =
-
+let message =
 document
-.getElementById("resultStatus");
+.getElementById("performanceMessage");
 
 
-if(
-percentage >= 80
-){
+if(percentage >= 80){
 
-status.innerText =
+message.innerText =
 "🏆 Excellent Performance!";
 
 }
 
-else if(
-percentage >= 50
-){
+else if(percentage >= 60){
 
-status.innerText =
-"✅ Good — Keep Practicing";
+message.innerText =
+"🎯 Very Good Performance";
+
+}
+
+else if(percentage >= 40){
+
+message.innerText =
+"👍 Good — और Practice करें";
 
 }
 
 else{
 
-status.innerText =
-"📚 और अभ्यास की जरूरत है";
+message.innerText =
+"📚 अधिक अभ्यास की जरूरत है";
 
 }
 
 
-showReview();
+createAnswerReview();
 
 }
 
 
+/* =========================================================
+   ANSWER REVIEW
+========================================================= */
 
-function showReview(){
+function createAnswerReview(){
 
-let review =
+let html =
 
 "<h3>📋 Answer Review</h3>";
 
 
-questions.forEach(
-function(q,index){
+activeExam.questions
+.forEach(
+function(question,index){
 
-let studentAnswer =
-answers[index];
+let given =
+userAnswers[index];
 
 
-let answerText =
+let userAnswer =
 
-studentAnswer === null
+given === null
 
 ?
 
@@ -4118,61 +2034,44 @@ studentAnswer === null
 
 :
 
-q.options[
-studentAnswer
-];
+question.o[given];
 
 
 let correctAnswer =
 
-q.options[
-q.answer
+question.o[
+question.a
 ];
 
 
-review +=
+html += `
 
-'<div class="review-item">'
+<div class="review-question">
 
-+
+<strong>
 
-'<strong>Q'
+Q${index+1}.
+${question.q}
 
-+
+</strong>
 
-(index + 1)
+<br>
 
-+
+आपका उत्तर:
+${userAnswer}
 
-'. '
+<br>
 
-+
+<span style="color:#14833b;font-weight:bold">
 
-q.question
+✓ सही उत्तर:
+${correctAnswer}
 
-+
+</span>
 
-'</strong>'
+</div>
 
-+
-
-'<br>आपका उत्तर: '
-
-+
-
-answerText
-
-+
-
-'<br>✅ सही उत्तर: '
-
-+
-
-correctAnswer
-
-+
-
-'</div>';
+`;
 
 });
 
@@ -4180,21 +2079,61 @@ correctAnswer
 document
 .getElementById("answerReview")
 .innerHTML =
-review;
+html;
 
 }
 
 
+/* =========================================================
+   RESTART
+========================================================= */
 
-function restartTest(){
+function restartCurrentTest(){
 
-location.reload();
+activeQuestion=0;
+
+userAnswers =
+new Array(
+activeExam.questions.length
+).fill(null);
+
+
+document
+.getElementById("testResult")
+.style.display="none";
+
+
+document
+.getElementById("testStart")
+.style.display="block";
 
 }
+
+
+/* =========================================================
+   CLOSE
+========================================================= */
+
+function closeTest(){
+
+clearInterval(
+examTimerInterval
+);
+
+document
+.getElementById("testScreen")
+.style.display="none";
+
+}
+
+
+/* =========================================================
+   INITIAL LOAD
+========================================================= */
+
+document.addEventListener(
+"DOMContentLoaded",
+loadExamCards
+);
 
 </script>
-
-
-</body>
-
-</html>
