@@ -2,407 +2,1912 @@
 <html lang="hi">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Aman Online Centre</title>
+<meta charset="UTF-8">
 
-    <style>
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<title>
+Aman Online Centre | Kharik Bazar, Bhagalpur
+</title>
 
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-        }
+<meta name="description"
+content="Aman Online Centre Kharik Bazar Bhagalpur - PAN Card, Voter Card, Driving Licence, Job Form Online, Jamin, Ayushman Card, Passport, ITR, GST, Mobile Repairing, Photocopy and digital services.">
 
-        /* NAVIGATION MENU */
+<meta name="keywords"
+content="Aman Online Centre, Kharik Bazar, Online Centre Kharik, Job Form Online Kharik, PAN Card Kharik, Voter Card Kharik, Bhagalpur Online Centre">
 
-        nav {
-            background-color: #003f8f;
-            text-align: center;
-            padding: 15px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+<style>
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            margin: 0 20px;
-            font-size: 17px;
-        }
+/* =========================
+BASIC
+========================= */
 
-        nav a:hover {
-            color: yellow;
-        }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-        /* HEADER */
+html{
+scroll-behavior:smooth;
+}
 
-        header {
-            background-color: #0757b9;
-            color: white;
-            text-align: center;
-            padding: 30px 15px;
-        }
+body{
+font-family:Arial, sans-serif;
+background:#f5f8fd;
+color:#172033;
+line-height:1.6;
+}
 
-        header img {
-            width: 110px;
-            height: 110px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid white;
-            margin-bottom: 15px;
-        }
+.container{
+width:92%;
+max-width:1250px;
+margin:auto;
+}
 
-        header h1 {
-            font-size: 32px;
-            margin-bottom: 10px;
-        }
+section{
+scroll-margin-top:75px;
+}
 
-        header p {
-            font-size: 17px;
-        }
 
-        /* SERVICES */
+/* =========================
+NAVBAR
+========================= */
 
-        .services {
-            padding: 40px 20px;
-            text-align: center;
-        }
+.navbar{
+position:sticky;
+top:0;
+z-index:1000;
 
-        .services h2 {
-            font-size: 28px;
-            margin-bottom: 30px;
-        }
+background:linear-gradient(
+90deg,
+#062b60,
+#084884
+);
 
-        .service-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
+box-shadow:0 4px 18px rgba(0,0,0,.18);
+}
 
-        .card {
-            background-color: white;
-            width: 300px;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-            transition: 0.3s;
-        }
+.nav-wrap{
+min-height:64px;
 
-        .card:hover {
-            transform: translateY(-7px);
-        }
+display:flex;
+align-items:center;
+justify-content:space-between;
 
-        .card h3 {
-            color: #0757b9;
-            margin-bottom: 12px;
-        }
+gap:20px;
+}
 
-        /* ABOUT */
+.brand{
+display:flex;
+align-items:center;
+gap:10px;
 
-        .about {
-            background-color: white;
-            padding: 40px 20px;
-            text-align: center;
-        }
+color:white;
+font-size:23px;
+font-weight:800;
+text-decoration:none;
+}
 
-        .about h2 {
-            color: #0757b9;
-            margin-bottom: 15px;
-        }
+.brand img{
+width:42px;
+height:42px;
 
-        .about p {
-            max-width: 700px;
-            margin: auto;
-            line-height: 1.7;
-        }
+border-radius:50%;
+object-fit:cover;
 
-        /* CONTACT */
+border:2px solid white;
+}
 
-        .contact {
-            background-color: #222;
-            color: white;
-            text-align: center;
-            padding: 40px 20px;
-        }
+.nav-links{
+display:flex;
+align-items:center;
+gap:25px;
+}
 
-        .contact h2 {
-            margin-bottom: 15px;
-        }
+.nav-links a{
+color:white;
+text-decoration:none;
+font-size:14px;
+font-weight:700;
+}
 
-        .contact p {
-            margin-bottom: 20px;
-        }
+.nav-links a:hover{
+color:#46c2ff;
+}
 
-        .btn {
-            display: inline-block;
-            padding: 12px 22px;
-            margin: 7px;
-            color: white;
-            text-decoration: none;
-            border-radius: 7px;
-            font-weight: bold;
-        }
+.nav-call{
+background:#1261c9;
+padding:9px 16px;
+border-radius:25px;
+}
 
-        .whatsapp {
-            background-color: #0a9f16;
-        }
+.menu-btn{
+display:none;
 
-        .call {
-            background-color: #0757b9;
-        }
+background:none;
+border:none;
 
-        /* MOBILE RESPONSIVE */
+color:white;
 
-        @media (max-width: 600px) {
+font-size:27px;
 
-            nav a {
-                display: inline-block;
-                margin: 7px;
-                font-size: 14px;
-            }
+cursor:pointer;
+}
 
-            header h1 {
-                font-size: 25px;
-            }
 
-            .card {
-                width: 100%;
-            }
-        }
+/* =========================
+HERO
+========================= */
 
-    </style>
+.hero{
+min-height:420px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+text-align:center;
+
+color:white;
+
+padding:35px 20px;
+
+background:
+linear-gradient(
+rgba(2,37,78,.88),
+rgba(4,84,178,.87)
+),
+url("Shop.jpg");
+
+background-size:cover;
+background-position:center;
+}
+
+.hero-content{
+width:100%;
+max-width:900px;
+}
+
+.hero-logo{
+width:115px;
+height:115px;
+
+object-fit:cover;
+
+border-radius:50%;
+
+border:4px solid white;
+
+box-shadow:
+0 8px 30px rgba(0,0,0,.35);
+
+margin-bottom:12px;
+}
+
+.hero h1{
+font-size:43px;
+line-height:1.15;
+margin-bottom:8px;
+}
+
+.tagline{
+font-size:19px;
+margin-bottom:7px;
+}
+
+.hero-address{
+font-size:15px;
+font-weight:600;
+}
+
+.hero-buttons{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+
+gap:12px;
+
+margin-top:19px;
+}
+
+.hero-btn{
+display:inline-flex;
+
+align-items:center;
+justify-content:center;
+
+min-width:165px;
+
+padding:11px 20px;
+
+border-radius:30px;
+
+text-decoration:none;
+
+font-size:15px;
+font-weight:700;
+
+transition:.25s;
+}
+
+.hero-btn:hover{
+transform:translateY(-3px);
+}
+
+.services-btn{
+background:white;
+color:#0756ae;
+}
+
+.whatsapp-btn{
+background:#17c65b;
+color:white;
+}
+
+.call-btn{
+color:white;
+
+border:2px solid white;
+
+background:rgba(255,255,255,.08);
+}
+
+
+/* =========================
+SECTION TITLE
+========================= */
+
+.section{
+padding:60px 0;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:28px;
+}
+
+.section-title h2{
+color:#0755ad;
+
+font-size:34px;
+
+margin-bottom:6px;
+}
+
+.section-title p{
+color:#6d7788;
+}
+
+
+/* =========================
+SERVICE SEARCH
+========================= */
+
+.service-search{
+max-width:620px;
+margin:0 auto 35px;
+position:relative;
+}
+
+.service-search input{
+width:100%;
+
+padding:15px 50px 15px 20px;
+
+border:2px solid #dbe6f5;
+
+outline:none;
+
+border-radius:30px;
+
+font-size:16px;
+
+background:white;
+
+box-shadow:
+0 6px 20px rgba(0,0,0,.07);
+
+transition:.3s;
+}
+
+.service-search input:focus{
+border-color:#168de2;
+
+box-shadow:
+0 7px 22px rgba(20,110,200,.14);
+}
+
+.search-icon{
+position:absolute;
+
+right:20px;
+top:50%;
+
+transform:translateY(-50%);
+
+font-size:21px;
+}
+
+.no-result{
+display:none;
+
+text-align:center;
+
+color:#d52e2e;
+
+font-weight:bold;
+
+margin:15px 0 30px;
+}
+
+
+/* =========================
+SERVICES
+========================= */
+
+.services-section{
+background:
+linear-gradient(
+180deg,
+#ffffff,
+#edf5ff
+);
+}
+
+.services-grid{
+display:grid;
+
+grid-template-columns:
+repeat(3,1fr);
+
+gap:18px;
+}
+
+.service-card{
+background:white;
+
+border-radius:15px;
+
+padding:23px 20px;
+
+display:flex;
+align-items:center;
+
+gap:17px;
+
+min-height:125px;
+
+border:
+1px solid #e8edf5;
+
+box-shadow:
+0 7px 20px rgba(22,57,100,.08);
+
+position:relative;
+
+overflow:hidden;
+
+transition:.3s;
+}
+
+.service-card::before{
+content:"";
+
+position:absolute;
+
+top:0;
+left:0;
+
+width:100%;
+height:3px;
+
+background:
+linear-gradient(
+90deg,
+#0877db,
+#18c76b
+);
+}
+
+.service-card:hover{
+transform:translateY(-6px);
+
+box-shadow:
+0 14px 30px rgba(18,69,130,.15);
+}
+
+.service-icon{
+flex:0 0 58px;
+
+width:58px;
+height:58px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+border-radius:50%;
+
+background:#eef5ff;
+
+font-size:29px;
+}
+
+.service-card h3{
+color:#064ca4;
+
+font-size:17px;
+
+margin-bottom:4px;
+}
+
+.service-card p{
+color:#596577;
+
+font-size:13px;
+
+line-height:1.5;
+}
+
+
+/* =========================
+WHY CHOOSE US
+========================= */
+
+.why-section{
+background:#edf5ff;
+
+padding:55px 0 65px;
+}
+
+.why-grid{
+display:grid;
+
+grid-template-columns:
+repeat(4,1fr);
+
+gap:18px;
+}
+
+.why-box{
+background:white;
+
+padding:27px 18px;
+
+text-align:center;
+
+border-radius:15px;
+
+box-shadow:
+0 7px 22px rgba(0,0,0,.07);
+
+transition:.3s;
+}
+
+.why-box:hover{
+transform:translateY(-5px);
+}
+
+.why-icon{
+font-size:32px;
+margin-bottom:10px;
+}
+
+.why-box h3{
+color:#0755ad;
+
+font-size:17px;
+
+margin-bottom:5px;
+}
+
+.why-box p{
+color:#697386;
+
+font-size:13px;
+}
+
+
+/* =========================
+CENTRE
+========================= */
+
+.centre-section{
+background:white;
+}
+
+.centre-wrap{
+display:grid;
+
+grid-template-columns:
+1fr 1fr;
+
+gap:45px;
+
+align-items:center;
+}
+
+.centre-image{
+border-radius:20px;
+
+overflow:hidden;
+
+box-shadow:
+0 15px 35px rgba(0,0,0,.15);
+}
+
+.centre-image img{
+display:block;
+
+width:100%;
+height:350px;
+
+object-fit:cover;
+}
+
+.centre-content h2{
+color:#0755ad;
+
+font-size:32px;
+
+margin-bottom:13px;
+}
+
+.centre-content p{
+color:#5f6878;
+
+margin-bottom:12px;
+
+font-size:15px;
+}
+
+.location-btn{
+display:inline-block;
+
+margin-top:12px;
+
+background:#0965c5;
+
+color:white;
+
+padding:11px 20px;
+
+border-radius:8px;
+
+text-decoration:none;
+
+font-weight:700;
+}
+
+
+/* =========================
+ABOUT
+========================= */
+
+.about-section{
+background:#f5f8fd;
+}
+
+.about-box{
+max-width:900px;
+
+margin:auto;
+
+background:white;
+
+padding:35px;
+
+text-align:center;
+
+border-radius:20px;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.07);
+}
+
+.about-box p{
+font-size:16px;
+
+color:#5e6879;
+}
+
+
+/* =========================
+CONTACT
+========================= */
+
+.contact-section{
+background:
+linear-gradient(
+135deg,
+#071d3c,
+#0b3c72
+);
+
+color:white;
+
+padding:55px 20px;
+}
+
+.contact-content{
+max-width:800px;
+
+margin:auto;
+
+text-align:center;
+}
+
+.contact-content h2{
+font-size:31px;
+
+margin-bottom:12px;
+}
+
+.contact-buttons{
+display:flex;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+gap:12px;
+
+margin-top:23px;
+}
+
+.contact-buttons a{
+padding:11px 19px;
+
+border-radius:8px;
+
+color:white;
+
+text-decoration:none;
+
+font-weight:700;
+}
+
+.contact-whatsapp{
+background:#11b94c;
+}
+
+.contact-call{
+background:#0870d8;
+}
+
+
+/* =========================
+FOOTER
+========================= */
+
+footer{
+background:#041426;
+
+color:#dce6f2;
+
+text-align:center;
+
+padding:20px 10px;
+
+font-size:13px;
+}
+
+
+/* =========================
+FLOATING WHATSAPP
+========================= */
+
+.floating-whatsapp{
+position:fixed;
+
+right:20px;
+bottom:20px;
+
+width:58px;
+height:58px;
+
+display:flex;
+
+align-items:center;
+justify-content:center;
+
+background:#18c85d;
+
+color:white;
+
+border-radius:50%;
+
+text-decoration:none;
+
+font-size:28px;
+
+box-shadow:
+0 8px 22px rgba(0,0,0,.25);
+
+z-index:999;
+}
+
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media(max-width:950px){
+
+.services-grid{
+grid-template-columns:
+repeat(2,1fr);
+}
+
+.why-grid{
+grid-template-columns:
+repeat(2,1fr);
+}
+
+.centre-wrap{
+grid-template-columns:1fr;
+}
+
+}
+
+
+@media(max-width:760px){
+
+.brand{
+font-size:18px;
+}
+
+.nav-links{
+display:none;
+
+position:absolute;
+
+top:64px;
+left:0;
+
+width:100%;
+
+flex-direction:column;
+
+gap:0;
+
+background:#06356d;
+
+padding:10px 0;
+}
+
+.nav-links.show{
+display:flex;
+}
+
+.nav-links a{
+width:100%;
+
+text-align:center;
+
+padding:13px;
+}
+
+.menu-btn{
+display:block;
+}
+
+.hero{
+min-height:auto;
+
+padding:35px 15px;
+}
+
+.hero-logo{
+width:90px;
+height:90px;
+}
+
+.hero h1{
+font-size:29px;
+}
+
+.tagline{
+font-size:16px;
+}
+
+.hero-address{
+font-size:13px;
+}
+
+.services-grid{
+grid-template-columns:1fr;
+}
+
+.section{
+padding:48px 0;
+}
+
+}
+
+
+@media(max-width:500px){
+
+.hero h1{
+font-size:26px;
+}
+
+.hero-buttons{
+flex-direction:column;
+
+align-items:center;
+}
+
+.hero-btn{
+width:100%;
+max-width:270px;
+}
+
+.why-grid{
+grid-template-columns:1fr;
+}
+
+.centre-image img{
+height:250px;
+}
+
+.about-box{
+padding:25px 18px;
+}
+
+.contact-buttons{
+flex-direction:column;
+}
+
+.contact-buttons a{
+width:100%;
+}
+
+}
+
+</style>
+
 </head>
 
 
 <body>
 
-<!-- MENU -->
 
-<nav>
-    <a href="#home">HOME</a>
-    <a href="#services">SERVICES</a>
-    <a href="#about">ABOUT US</a>
-    <a href="#contact">CONTACT</a>
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+<div class="container nav-wrap">
+
+<a href="#home"
+class="brand">
+
+<img
+src="logo.jpg"
+alt="Logo">
+
+AMAN ONLINE CENTRE
+
+</a>
+
+
+<button
+class="menu-btn"
+onclick="toggleMenu()">
+
+☰
+
+</button>
+
+
+<div
+class="nav-links"
+id="navLinks">
+
+<a href="#home">HOME</a>
+
+<a href="#services">SERVICES</a>
+
+<a href="#why">WHY US</a>
+
+<a href="#centre">CENTRE</a>
+
+<a href="#about">ABOUT</a>
+
+<a href="#contact">CONTACT</a>
+
+<a
+href="tel:7992332267"
+class="nav-call">
+
+☎ 7992332267
+
+</a>
+
+</div>
+
+</div>
+
 </nav>
 
 
-<!-- HEADER -->
 
-<header id="home">
+<!-- HERO -->
 
-    <!-- Logo बाद में यहाँ लगाएंगे -->
-<img src="logo.jpg" alt="Aman Online Centre Logo">
+<header
+class="hero"
+id="home">
 
-    <h1>AMAN ONLINE CENTRE</h1>
+<div class="hero-content">
 
-    <p>आपकी डिजिटल सेवाओं का विश्वसनीय केंद्र</p>
+<img
+src="logo.jpg"
+class="hero-logo"
+alt="Aman Online Centre">
+
+
+<h1>
+AMAN ONLINE CENTRE
+</h1>
+
+
+<p class="tagline">
+
+आपकी डिजिटल एवं ऑनलाइन सेवाओं का
+विश्वसनीय केंद्र
+
+</p>
+
+
+<p class="hero-address">
+
+📍 Ganinath Mandir Road,
+Pani Tanki Ke Samne,
+Kharik Bazar,
+Bhagalpur, Bihar
+
+</p>
+
+
+<div class="hero-buttons">
+
+<a
+href="#services"
+class="hero-btn services-btn">
+
+▦ हमारी सेवाएँ देखें
+
+</a>
+
+
+<a
+href="https://wa.me/917992332267"
+class="hero-btn whatsapp-btn">
+
+● WhatsApp करें
+
+</a>
+
+
+<a
+href="tel:7992332267"
+class="hero-btn call-btn">
+
+☎ Call Now
+
+</a>
+
+</div>
+
+</div>
 
 </header>
 
 
+
 <!-- SERVICES -->
 
-<section class="services" id="services">
+<section
+class="section services-section"
+id="services">
 
-    <h2>हमारी सेवाएँ</h2>
 
-    <div class="service-container">
+<div class="container">
 
-       <div class="service-container">
 
-    <div class="card">
-        <h3>PAN Card</h3>
-        <p>PAN Card संबंधित ऑनलाइन सेवाएँ उपलब्ध हैं।</p>
-    </div>
+<div class="section-title">
 
-    <div class="card">
-        <h3>Voter Card</h3>
-        <p>Voter Card संबंधित ऑनलाइन सेवाएँ।</p>
-    </div>
+<h2>
+हमारी सेवाएँ
+</h2>
 
-    <div class="card">
-        <h3>Driving Licence</h3>
-        <p>Driving Licence संबंधित ऑनलाइन कार्य।</p>
-    </div>
-
-    <div class="card">
-        <h3>जाति, आय एवं निवास</h3>
-        <p>जाति, आय एवं निवास प्रमाण पत्र संबंधित ऑनलाइन कार्य।</p>
-    </div>
-
-    <div class="card">
-        <h3>जमीन संबंधित कार्य</h3>
-        <p>जमीन रसीद, Mutation, Parimarjan एवं अन्य ऑनलाइन कार्य।</p>
-    </div>
-
-    <div class="card">
-        <h3>राशन कार्ड</h3>
-        <p>Ration Card संबंधित ऑनलाइन सेवाएँ।</p>
-    </div>
-
-    <div class="card">
-        <h3>आयुष्मान कार्ड</h3>
-        <p>Ayushman Card संबंधित सेवाएँ उपलब्ध हैं।</p>
-    </div>
-
-    <div class="card">
-        <h3>पासपोर्ट</h3>
-        <p>Passport संबंधित ऑनलाइन आवेदन एवं सहायता।</p>
-    </div>
-
-    <div class="card">
-        <h3>किसान पंजीकरण</h3>
-        <p>Kisan Panjikaran संबंधित ऑनलाइन कार्य।</p>
-    </div>
-
-    <div class="card">
-        <h3>वृद्धा पेंशन</h3>
-        <p>Old Age Pension संबंधित ऑनलाइन सेवाएँ।</p>
-    </div>
-
-    <div class="card">
-        <h3>Airtel Payment Bank</h3>
-        <p>खाता खोलने एवं संबंधित सेवाएँ उपलब्ध हैं।</p>
-    </div>
-
-    <div class="card">
-        <h3>ITR Return</h3>
-        <p>Income Tax Return filing संबंधित सेवा।</p>
-    </div>
-
-    <div class="card">
-        <h3>GST Services</h3>
-        <p>GST Registration एवं GST Return filing सेवा।</p>
-    </div>
-
-    <div class="card">
-        <h3>Mobile Repairing</h3>
-        <p>मोबाइल रिपेयरिंग संबंधित सेवा।</p>
-    </div>
-
-    <div class="card">
-        <h3>Laptop / Desktop</h3>
-        <p>Hardware एवं Software संबंधित सेवा।</p>
-    </div>
-
-    <div class="card">
-        <h3>Photocopy & Lamination</h3>
-        <p>A4/A3 Photocopy एवं Lamination की सुविधा उपलब्ध है।</p>
-    </div>
-
-    <div class="card">
-        <h3>Photograph</h3>
-        <p>Passport Size एवं अन्य फोटो की सुविधा उपलब्ध है।</p>
-    </div>
+<p>
+नीचे अपनी जरूरत की सेवा Search करें
+</p>
 
 </div>
-    </div>
+
+
+
+<!-- SEARCH BOX -->
+
+<div class="service-search">
+
+<input
+type="text"
+id="serviceSearch"
+placeholder="🔍 सेवा खोजें — जैसे PAN, Job, GST, Mobile..."
+onkeyup="searchServices()">
+
+<span class="search-icon">
+⌕
+</span>
+
+</div>
+
+
+<div
+class="no-result"
+id="noResult">
+
+यह सेवा नहीं मिली। अधिक जानकारी के लिए WhatsApp करें।
+
+</div>
+
+
+
+<div
+class="services-grid"
+id="servicesGrid">
+
+
+<div class="service-card">
+
+<div class="service-icon">
+🪪
+</div>
+
+<div>
+
+<h3>PAN Card</h3>
+
+<p>
+PAN Card संबंधित ऑनलाइन सेवाएँ उपलब्ध हैं।
+</p>
+
+</div>
+
+</div>
+
+
+
+<div class="service-card">
+
+<div class="service-icon">
+🗳️
+</div>
+
+<div>
+
+<h3>Voter Card</h3>
+
+<p>
+Voter Card संबंधित ऑनलाइन सेवाएँ।
+</p>
+
+</div>
+
+</div>
+
+
+
+<div class="service-card">
+
+<div class="service-icon">
+🚗
+</div>
+
+<div>
+
+<h3>Driving Licence</h3>
+
+<p>
+Driving Licence संबंधित ऑनलाइन कार्य।
+</p>
+
+</div>
+
+</div>
+
+
+
+<!-- JOB FORM -->
+
+<div class="service-card">
+
+<div class="service-icon">
+📝
+</div>
+
+<div>
+
+<h3>
+सरकारी एवं गैर-सरकारी Job Form
+</h3>
+
+<p>
+सभी प्रकार के सरकारी एवं गैर-सरकारी
+नौकरी के Online Form भरे जाते हैं।
+</p>
+
+</div>
+
+</div>
+
+
+
+<div class="service-card">
+
+<div class="service-icon">
+📄
+</div>
+
+<div>
+
+<h3>
+जाति, आय एवं निवास
+</h3>
+
+<p>
+प्रमाण पत्र संबंधित ऑनलाइन कार्य।
+</p>
+
+</div>
+
+</div>
+
+
+
+<div class="service-card">
+
+<div class="service-icon">
+🏠
+</div>
+
+<div>
+
+<h3>
+जमीन संबंधित कार्य
+</h3>
+
+<p>
+जमीन रसीद, Mutation, Parimarjan एवं अन्य कार्य।
+</p>
+
+</div>
+
+</div>
+
+
+
+<div class="service-card">
+
+<div class="service-icon">
+📋
+</div>
+
+<div>
+
+<h3>
+राशन कार्ड
+</h3>
+
+<p>
+Ration Card संबंधित ऑनलाइन सेवाएँ।
+</p>
+
+</div>
+
+</div>
+
+
+
+<div class="service-card">
+
+<div class="service-icon">
+👨‍👩‍👧
+</div>
+
+<div>
+
+<h3>
+आयुष्मान कार्ड
+</h3>
+
+<p>
+Ayushman Card संबंधित सेवाएँ उपलब्ध हैं।
+</p>
+
+</div>
+
+</div>
+
+
+
+<div class="service-card">
+
+<div class="service-icon">
+🌐
+</div>
+
+<div>
+
+<h3>
+Passport
+</h3>
+
+<p>
+Passport संबंधित ऑनलाइन आवेदन एवं सहायता।
+</p>
+
+</div>
+
+</div>
+
+
+
+<div class="service-card">
+
+<div class="service-icon">
+🌾
+</div>
+
+<div>
+
+<h3>
+किसान पंजीकरण
+</h3>
+
+<p>
+Kisan Panjikaran संबंधित ऑनलाइन कार्य।
+</p>
+
+</div>
+
+</div>
+
+
+
+<div class="service-card">
+
+<div class="service-icon">
+👴
+</div>
+
+<div>
+
+<h3>
+वृद्धा पेंशन
+</h3>
+
+<p>
+वृद्धा पेंशन संबंधित ऑनलाइन कार्य एवं सहायता।
+</p>
+
+</div>
+
+</div>
+
+
+
+<div class="service-card">
+
+<div class="service-icon">
+🏦
+</div>
+
+<div>
+
+<h3>
+Airtel Payment Bank
+</h3>
+
+<p>
+Airtel Payment Bank संबंधित सेवाएँ उपलब्ध हैं।
+</p>
+
+</div>
+
+</div>
+
+
+
+<div class="service-card">
+
+<div class="service-icon">
+💰
+</div>
+
+<div>
+
+<h3>
+ITR Return
+</h3>
+
+<p>
+Income Tax Return Filing संबंधित सेवा।
+</p>
+
+</div>
+
+</div>
+
+
+
+<div class="service-card">
+
+<div class="service-icon">
+🧾
+</div>
+
+<div>
+
+<h3>
+GST Services
+</h3>
+
+<p>
+GST Registration एवं GST Return Filing सेवा।
+</p>
+
+</div>
+
+</div>
+
+
+
+<div class="service-card">
+
+<div class="service-icon">
+📱
+</div>
+
+<div>
+
+<h3>
+Mobile Repairing
+</h3>
+
+<p>
+Mobile repairing संबंधित सेवाएँ उपलब्ध हैं।
+</p>
+
+</div>
+
+</div>
+
+
+
+<div class="service-card">
+
+<div class="service-icon">
+💻
+</div>
+
+<div>
+
+<h3>
+Laptop / Desktop
+</h3>
+
+<p>
+Hardware एवं Software संबंधित सेवाएँ।
+</p>
+
+</div>
+
+</div>
+
+
+
+<div class="service-card">
+
+<div class="service-icon">
+🖨️
+</div>
+
+<div>
+
+<h3>
+Photocopy & Lamination
+</h3>
+
+<p>
+A4/A3 Photocopy एवं Lamination सुविधा उपलब्ध है।
+</p>
+
+</div>
+
+</div>
+
+
+
+<div class="service-card">
+
+<div class="service-icon">
+📷
+</div>
+
+<div>
+
+<h3>
+Photograph
+</h3>
+
+<p>
+Passport Size एवं अन्य फोटो की सुविधा उपलब्ध है।
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
+
+
+
+<!-- WHY US -->
+
+<section
+class="why-section"
+id="why">
+
+
+<div class="container">
+
+
+<div class="section-title">
+
+<h2>
+Why Choose Us?
+</h2>
+
+<p>
+विश्वसनीय, सरल और सुविधाजनक सेवा
+</p>
+
+</div>
+
+
+<div class="why-grid">
+
+
+<div class="why-box">
+
+<div class="why-icon">
+⚡
+</div>
+
+<h3>
+Fast Service
+</h3>
+
+<p>
+सरल और सुविधाजनक सेवा।
+</p>
+
+</div>
+
+
+
+<div class="why-box">
+
+<div class="why-icon">
+🤝
+</div>
+
+<h3>
+Trusted Support
+</h3>
+
+<p>
+ग्राहकों को सही जानकारी और सहयोग।
+</p>
+
+</div>
+
+
+
+<div class="why-box">
+
+<div class="why-icon">
+💻
+</div>
+
+<h3>
+Multiple Services
+</h3>
+
+<p>
+एक ही जगह कई डिजिटल सेवाएँ।
+</p>
+
+</div>
+
+
+
+<div class="why-box">
+
+<div class="why-icon">
+📍
+</div>
+
+<h3>
+Easy Location
+</h3>
+
+<p>
+खरीक बाजार में सुविधाजनक स्थान।
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- CENTRE -->
+
+<section
+class="section centre-section"
+id="centre">
+
+
+<div class="container centre-wrap">
+
+
+<div class="centre-image">
+
+<img
+src="Shop.jpg"
+alt="Aman Online Centre">
+
+</div>
+
+
+
+<div class="centre-content">
+
+<h2>
+हमारे केंद्र पर आएँ
+</h2>
+
+
+<p>
+
+Aman Online Centre में Digital,
+Online एवं Computer संबंधित
+विभिन्न सेवाएँ उपलब्ध हैं।
+
+</p>
+
+
+<p>
+
+<strong>
+पता
+</strong>
+
+<br>
+
+Ganinath Mandir Road,
+
+<br>
+
+Pani Tanki Ke Samne,
+
+<br>
+
+Kharik Bazar,
+
+Bhagalpur, Bihar
+
+</p>
+
+
+<p>
+
+☎ <strong>7992332267</strong>
+
+<br>
+
+☎ <strong>9570619087</strong>
+
+</p>
+
+
+<a
+href="https://maps.app.goo.gl/sC8u6T7jhacEhj3o7?g_st=aw"
+target="_blank"
+class="location-btn">
+
+📍 Google Maps पर Location देखें
+
+</a>
+
+
+</div>
+
+</div>
+
+</section>
+
 
 
 <!-- ABOUT -->
 
-<section class="about" id="about">
-<section style="text-align:center; padding:40px 20px; background:white;">
+<section
+class="section about-section"
+id="about">
 
-    <h2 style="color:#0757b9; margin-bottom:20px;">
-        हमारा केंद्र
-    </h2>
+<div class="container">
 
-    <img src="Shop.jpg"
-         alt="Aman Online Centre Shop"
-         style="width:300px; max-width:90%; border-radius:12px;
-         box-shadow:0 4px 12px rgba(0,0,0,0.25);">
 
-    <h3 style="margin-top:20px;">AMAN ONLINE CENTRE</h3>
+<div class="section-title">
 
-    <p style="margin-top:10px;">
-        खरीक बाजार, भागलपुर, बिहार
-    </p>
-<a href="https://maps.app.goo.gl/sC8u6T7jhacEhj3o7?g_st=aw"
-   target="_blank"
-   style="
-   display:inline-block;
-   margin-top:15px;
-   padding:12px 22px;
-   background:#0757b9;
-   color:white;
-   text-decoration:none;
-   border-radius:7px;
-   font-weight:bold;">
-   📍 Google Maps पर Location देखें
-</a>
+<h2>
+हमारे बारे में
+</h2>
+
+<p>
+Aman Online Centre – Kharik Bazar
+</p>
+
+</div>
+
+
+<div class="about-box">
+
+<p>
+
+Aman Online Centre में ग्राहकों को
+विभिन्न Digital, Online एवं Computer
+संबंधित सेवाएँ सरल और सुविधाजनक तरीके
+से उपलब्ध कराई जाती हैं।
+
+हमारा उद्देश्य ग्राहकों को जरूरी
+ऑनलाइन सेवाओं के लिए विश्वसनीय
+सहायता प्रदान करना है।
+
+</p>
+
+</div>
+
+</div>
 
 </section>
 
-    <h2>About Us</h2>
-
-    <p>
-        Aman Online Centre में विभिन्न डिजिटल एवं ऑनलाइन सेवाएँ
-        ग्राहकों को सरल और सुविधाजनक तरीके से उपलब्ध कराई जाती हैं।
-    </p>
-
-</section>
 
 
 <!-- CONTACT -->
 
-<section class="contact" id="contact">
+<section
+class="contact-section"
+id="contact">
 
-    <section class="contact" id="contact">
 
-    <h2>Contact Us</h2>
+<div class="contact-content">
 
-    <p>
-        Aman Online Centre<br>
-        Ganinath Mandir Road, Pani Tanki ke Samne,<br>
-        Kharik Bazar, Bhagalpur, Bihar
-    </p>
 
-    <p>
-        📞 7992332267<br>
-        📞 9570619087
-    </p>
+<h2>
+Contact Us
+</h2>
 
-    <a class="btn whatsapp"
-       href="https://wa.me/917992332267"
-       target="_blank">
-       WhatsApp करें
-    </a>
 
-    <a class="btn call"
-       href="tel:+917992332267">
-       📞 Call 7992332267
-    </a>
+<p>
 
-    <a class="btn call"
-       href="tel:+919570619087">
-       📞 Call 9570619087
-    </a>
+<strong>
+AMAN ONLINE CENTRE
+</strong>
+
+</p>
+
+
+<p>
+
+📍 Ganinath Mandir Road,
+Pani Tanki Ke Samne,
+
+<br>
+
+Kharik Bazar,
+Bhagalpur, Bihar
+
+</p>
+
+
+<p>
+
+☎ 7992332267
+
+&nbsp; | &nbsp;
+
+☎ 9570619087
+
+</p>
+
+
+
+<div class="contact-buttons">
+
+
+<a
+href="https://wa.me/917992332267"
+class="contact-whatsapp">
+
+● WhatsApp करें
+
+</a>
+
+
+<a
+href="tel:7992332267"
+class="contact-call">
+
+☎ 7992332267
+
+</a>
+
+
+<a
+href="tel:9570619087"
+class="contact-call">
+
+☎ 9570619087
+
+</a>
+
+
+</div>
+
+</div>
 
 </section>
 
-</section>
-<footer style="
-    background:#111;
-    color:white;
-    text-align:center;
-    padding:18px;
-    font-size:14px;
-">
-    © 2026 Aman Online Centre. All Rights Reserved.
+
+
+<footer>
+
+© 2026 Aman Online Centre.
+All Rights Reserved.
+
 </footer>
+
+
+
+<a
+href="https://wa.me/917992332267"
+class="floating-whatsapp">
+
+☎
+
+</a>
+
+
+
+<script>
+
+/* MOBILE MENU */
+
+function toggleMenu(){
+
+document
+.getElementById("navLinks")
+.classList
+.toggle("show");
+
+}
+
+
+
+/* SERVICE SEARCH */
+
+function searchServices(){
+
+let input =
+document
+.getElementById("serviceSearch")
+.value
+.toLowerCase()
+.trim();
+
+
+let cards =
+document
+.querySelectorAll(".service-card");
+
+
+let found = false;
+
+
+cards.forEach(function(card){
+
+let text =
+card
+.innerText
+.toLowerCase();
+
+
+if(text.includes(input)){
+
+card.style.display="flex";
+
+found=true;
+
+}
+
+else{
+
+card.style.display="none";
+
+}
+
+});
+
+
+if(found){
+
+document
+.getElementById("noResult")
+.style.display="none";
+
+}
+
+else{
+
+document
+.getElementById("noResult")
+.style.display="block";
+
+}
+
+}
+
+
+/* CLOSE MOBILE MENU */
+
+document
+.querySelectorAll(".nav-links a")
+.forEach(function(link){
+
+link.addEventListener(
+"click",
+function(){
+
+document
+.getElementById("navLinks")
+.classList
+.remove("show");
+
+});
+
+});
+
+</script>
+
 
 </body>
 </html>
