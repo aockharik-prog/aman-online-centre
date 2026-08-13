@@ -1,665 +1,838 @@
-<!-- =========================================================
-     AMAN ONLINE CENTRE
-     PROFESSIONAL MULTI EXAM MOCK TEST SYSTEM
-========================================================= -->
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>AMAN Mock Test V3</title>
 
 <style>
 
-/* =========================
-   MOCK TEST LIBRARY
-========================= */
-
-.mock-system{
-    padding:60px 0;
-    background:linear-gradient(180deg,#f5f9ff,#eaf3ff);
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
 }
 
-.mock-container{
-    width:92%;
-    max-width:1200px;
-    margin:auto;
+body{
+background:#f2f5fa;
+color:#202124;
 }
 
-.mock-heading{
-    text-align:center;
-    margin-bottom:30px;
+header{
+background:linear-gradient(135deg,#061a3a,#0b57d0);
+color:#fff;
+padding:13px 20px;
+box-shadow:0 4px 16px rgba(0,0,0,.18);
 }
 
-.mock-heading h2{
-    color:#0755ad;
-    font-size:34px;
-    margin-bottom:5px;
+.header-inner{
+max-width:1400px;
+margin:auto;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:15px;
 }
 
-.mock-heading p{
-    color:#667085;
+.logo-area h2{
+font-size:23px;
 }
 
-/* SEARCH */
-
-.exam-search{
-    max-width:650px;
-    margin:0 auto 30px;
+.logo-area p{
+font-size:12px;
+color:#d5e3ff;
+margin-top:3px;
 }
 
-.exam-search input{
-    width:100%;
-    padding:15px 20px;
-    border-radius:30px;
-    border:2px solid #d9e5f4;
-    background:white;
-    font-size:16px;
-    outline:none;
+.timer-area{
+display:flex;
+align-items:center;
+gap:10px;
 }
 
-.exam-search input:focus{
-    border-color:#0874d8;
+.timer-label{
+font-size:12px;
 }
 
-/* EXAM CARDS */
-
-.exam-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:18px;
+.timer{
+background:#fff;
+color:#c62828;
+padding:9px 14px;
+border-radius:9px;
+font-weight:800;
+font-size:18px;
+min-width:105px;
+text-align:center;
 }
 
-.exam-card{
-    background:white;
-    border-radius:16px;
-    padding:22px;
-    text-align:center;
-    box-shadow:0 8px 25px rgba(0,0,0,.08);
-    border-top:4px solid #0874d8;
-    transition:.3s;
+.exam-bar{
+background:white;
+border-bottom:1px solid #dde3ec;
 }
 
-.exam-card:hover{
-    transform:translateY(-5px);
-    box-shadow:0 13px 30px rgba(0,0,0,.12);
+.exam-bar-inner{
+max-width:1400px;
+margin:auto;
+padding:13px 18px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:15px;
 }
 
-.exam-icon{
-    font-size:42px;
+.exam-name h3{
+font-size:17px;
+color:#18335c;
 }
 
-.exam-card h3{
-    color:#0755ad;
-    margin:8px 0;
+.exam-name p{
+font-size:12px;
+color:#777;
+margin-top:3px;
 }
 
-.exam-meta{
-    font-size:13px;
-    color:#667085;
-    margin-bottom:15px;
+.exam-stats{
+display:flex;
+gap:8px;
+flex-wrap:wrap;
 }
 
-.exam-buttons{
-    display:flex;
-    flex-direction:column;
-    gap:8px;
+.stat-badge{
+background:#eaf2ff;
+color:#0b57d0;
+padding:7px 10px;
+border-radius:20px;
+font-size:12px;
+font-weight:bold;
 }
 
-.exam-buttons button,
-.exam-buttons a{
-    border:none;
-    border-radius:8px;
-    padding:11px;
-    font-weight:bold;
-    cursor:pointer;
-    text-decoration:none;
+.main{
+max-width:1400px;
+margin:18px auto;
+padding:0 15px;
 }
 
-.start-exam{
-    background:#0874d8;
-    color:white;
+.test-layout{
+display:grid;
+grid-template-columns:minmax(0,1fr) 330px;
+gap:18px;
 }
 
-.view-pdf{
-    background:#eef5ff;
-    color:#0755ad;
+.question-panel{
+background:white;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 5px 22px rgba(0,0,0,.07);
 }
 
-.download-pdf{
-    background:#16a34a;
-    color:white;
+.question-top{
+padding:15px 20px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+border-bottom:1px solid #e4e7eb;
+background:#fafbfd;
 }
 
-
-/* =========================
-   TEST SCREEN
-========================= */
-
-.test-screen{
-    display:none;
-    max-width:950px;
-    margin:30px auto 0;
-    background:white;
-    border-radius:18px;
-    overflow:hidden;
-    box-shadow:0 12px 35px rgba(0,0,0,.12);
+.question-number{
+font-size:17px;
+font-weight:bold;
 }
 
-.test-header{
-    background:linear-gradient(135deg,#063b78,#0874d8);
-    color:white;
-    padding:22px;
-    text-align:center;
+.question-status{
+font-size:12px;
+background:#e9edf3;
+padding:7px 10px;
+border-radius:20px;
 }
 
-.test-header h2{
-    margin-bottom:4px;
+.question-body{
+padding:27px;
+min-height:400px;
 }
 
-.test-start{
-    padding:35px;
-    text-align:center;
-}
-
-.test-start input{
-    width:100%;
-    max-width:450px;
-    padding:14px;
-    border:2px solid #dbe5ef;
-    border-radius:9px;
-    font-size:16px;
-    margin:18px 0;
-}
-
-.begin-btn{
-    border:none;
-    background:#0874d8;
-    color:white;
-    padding:13px 30px;
-    border-radius:25px;
-    font-weight:bold;
-    cursor:pointer;
-}
-
-.close-test{
-    margin-left:8px;
-    border:none;
-    background:#e7eaf0;
-    padding:13px 22px;
-    border-radius:25px;
-    cursor:pointer;
-}
-
-
-/* QUESTION AREA */
-
-.question-area{
-    display:none;
-    padding:25px;
-}
-
-.exam-info{
-    display:flex;
-    justify-content:space-between;
-    flex-wrap:wrap;
-    gap:10px;
-    padding:13px 15px;
-    background:#eef5ff;
-    border-radius:9px;
-    margin-bottom:18px;
-    font-weight:bold;
-}
-
-.exam-timer{
-    color:#d92d20;
-}
-
-.progress-bg{
-    width:100%;
-    height:7px;
-    background:#e5e7eb;
-    border-radius:10px;
-    overflow:hidden;
-    margin-bottom:20px;
-}
-
-.progress-fill{
-    height:100%;
-    width:0%;
-    background:linear-gradient(90deg,#0874d8,#16a34a);
-}
-
-.question-card{
-    padding:22px;
-    background:#fafcff;
-    border:1px solid #e2e8f0;
-    border-radius:12px;
-}
-
-.question-no{
-    color:#0874d8;
-    font-weight:bold;
-    margin-bottom:7px;
+.subject{
+color:#0b57d0;
+font-size:12px;
+font-weight:bold;
+margin-bottom:10px;
 }
 
 .question-text{
-    font-size:19px;
-    font-weight:bold;
-    margin-bottom:17px;
+font-size:20px;
+font-weight:600;
+line-height:1.65;
+margin-bottom:22px;
 }
 
-.answer-option{
-    display:block;
-    padding:13px;
-    border:1px solid #dbe4ee;
-    border-radius:9px;
-    margin:9px 0;
-    cursor:pointer;
-    background:white;
+.option{
+display:flex;
+align-items:flex-start;
+gap:12px;
+border:2px solid #e1e6ed;
+padding:14px 15px;
+border-radius:11px;
+margin-bottom:12px;
+cursor:pointer;
+transition:.18s;
+line-height:1.5;
 }
 
-.answer-option:hover{
-    background:#eef6ff;
-    border-color:#0874d8;
+.option:hover{
+border-color:#8ab4f8;
+background:#f7faff;
 }
 
-.answer-option input{
-    margin-right:8px;
+.option.selected{
+border-color:#0b57d0;
+background:#eaf2ff;
 }
 
-/* NAVIGATION */
-
-.test-navigation{
-    display:flex;
-    justify-content:space-between;
-    gap:10px;
-    margin-top:20px;
+.option-letter{
+width:29px;
+height:29px;
+min-width:29px;
+border-radius:50%;
+background:#edf1f6;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:bold;
 }
 
-.nav-test-btn{
-    border:none;
-    border-radius:8px;
-    padding:11px 20px;
-    font-weight:bold;
-    cursor:pointer;
+.option.selected .option-letter{
+background:#0b57d0;
+color:white;
 }
 
-.previous-btn{
-    background:#e9eef5;
+.actions{
+border-top:1px solid #e1e6ed;
+padding:16px 20px;
+display:flex;
+align-items:center;
+gap:10px;
+flex-wrap:wrap;
+background:#fafbfd;
+}
+
+button{
+border:none;
+border-radius:9px;
+padding:11px 15px;
+cursor:pointer;
+font-weight:bold;
+}
+
+.prev-btn{
+background:#e8ecf2;
+color:#333;
+}
+
+.clear-btn{
+background:#fff0f0;
+color:#c62828;
+}
+
+.review-btn{
+background:#fff2c7;
+color:#745400;
 }
 
 .next-btn{
-    background:#0874d8;
-    color:white;
+margin-left:auto;
+background:#0b57d0;
+color:white;
+padding-left:22px;
+padding-right:22px;
 }
 
-.final-submit{
-    background:#16a34a;
-    color:white;
+.side-panel{
+background:#fff;
+border-radius:15px;
+box-shadow:0 5px 22px rgba(0,0,0,.07);
+overflow:hidden;
+height:max-content;
+position:sticky;
+top:15px;
 }
 
-/* QUESTION PALETTE */
-
-.question-palette{
-    display:flex;
-    flex-wrap:wrap;
-    gap:6px;
-    margin-top:22px;
+.side-header{
+padding:16px 18px;
+background:#0b57d0;
+color:white;
 }
 
-.palette-question{
-    width:38px;
-    height:38px;
-    border:none;
-    border-radius:7px;
-    background:#e9eef5;
-    font-weight:bold;
-    cursor:pointer;
+.side-header h3{
+font-size:17px;
 }
 
-.palette-question.current{
-    background:#0874d8;
-    color:white;
+.side-header p{
+font-size:11px;
+opacity:.85;
+margin-top:3px;
 }
 
-.palette-question.done{
-    background:#16a34a;
-    color:white;
+.counters{
+padding:15px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:8px;
+border-bottom:1px solid #e4e7eb;
 }
 
-
-/* =========================
-   RESULT
-========================= */
-
-.test-result{
-    display:none;
-    padding:30px;
-    text-align:center;
+.counter{
+font-size:11px;
+padding:8px;
+border-radius:8px;
+display:flex;
+align-items:center;
+gap:6px;
+background:#f6f8fb;
 }
 
-.score-circle{
-    width:150px;
-    height:150px;
-    margin:20px auto;
-    border-radius:50%;
-    background:linear-gradient(135deg,#0755ad,#0c8ee8);
-    color:white;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
+.counter span:first-child{
+width:16px;
+height:16px;
+border-radius:4px;
+display:inline-block;
 }
 
-.score-circle strong{
-    font-size:35px;
+.legend-notvisited{
+background:#d9dfe7;
 }
 
-.result-stats{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:10px;
-    margin:25px 0;
+.legend-answered{
+background:#2e7d32;
 }
 
-.result-item{
-    background:#f3f7fb;
-    border-radius:10px;
-    padding:15px 5px;
+.legend-notanswered{
+background:#d32f2f;
 }
 
-.result-item strong{
-    display:block;
-    font-size:22px;
-    color:#0755ad;
+.legend-review{
+background:#7b1fa2;
 }
 
-.answer-review{
-    text-align:left;
-    margin-top:25px;
+.palette-wrap{
+padding:15px;
 }
 
-.review-question{
-    padding:15px;
-    margin:12px 0;
-    background:#f8fafc;
-    border-radius:9px;
-    border-left:4px solid #0874d8;
+.palette-title{
+font-size:13px;
+font-weight:bold;
+margin-bottom:10px;
 }
 
-.restart-test{
-    margin-top:20px;
-    padding:12px 25px;
-    border:none;
-    border-radius:25px;
-    background:#0874d8;
-    color:white;
-    font-weight:bold;
-    cursor:pointer;
+.palette{
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:7px;
+max-height:365px;
+overflow:auto;
+padding:3px;
 }
 
+.qbtn{
+aspect-ratio:1;
+padding:0;
+border-radius:7px;
+background:#d9dfe7;
+color:#222;
+}
 
-/* MOBILE */
+.qbtn.answered{
+background:#2e7d32;
+color:#fff;
+}
+
+.qbtn.notanswered{
+background:#d32f2f;
+color:#fff;
+}
+
+.qbtn.review{
+background:#7b1fa2;
+color:#fff;
+}
+
+.qbtn.current{
+outline:3px solid #0b57d0;
+outline-offset:2px;
+}
+
+.submit-wrap{
+padding:15px;
+border-top:1px solid #e4e7eb;
+}
+
+.submit-btn{
+width:100%;
+background:#e53935;
+color:white;
+font-size:15px;
+padding:13px;
+}
+
+.result-screen{
+display:none;
+max-width:1100px;
+margin:25px auto;
+padding:0 15px 40px;
+}
+
+.result-card{
+background:white;
+border-radius:17px;
+box-shadow:0 5px 24px rgba(0,0,0,.08);
+overflow:hidden;
+}
+
+.result-header{
+background:linear-gradient(135deg,#061a3a,#0b57d0);
+color:white;
+padding:28px;
+text-align:center;
+}
+
+.result-header h1{
+font-size:28px;
+}
+
+.result-header p{
+margin-top:6px;
+color:#d6e4ff;
+}
+
+.performance{
+padding:24px;
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:13px;
+}
+
+.performance-box{
+background:#f5f8fc;
+padding:18px 10px;
+border-radius:12px;
+text-align:center;
+}
+
+.performance-box h2{
+color:#0b57d0;
+font-size:23px;
+}
+
+.performance-box p{
+color:#666;
+font-size:12px;
+margin-top:5px;
+}
+
+.result-actions{
+padding:0 24px 20px;
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+}
+
+.home-btn{
+background:#e7eefc;
+color:#0b57d0;
+}
+
+.retry-btn{
+background:#0b57d0;
+color:#fff;
+}
+
+.solution-section{
+padding:5px 24px 25px;
+}
+
+.solution-section h2{
+font-size:21px;
+margin:15px 0;
+}
+
+.solution{
+border:1px solid #e0e5eb;
+border-radius:12px;
+padding:16px;
+margin-bottom:13px;
+}
+
+.solution-q{
+font-weight:bold;
+line-height:1.5;
+margin-bottom:10px;
+}
+
+.answer-line{
+font-size:14px;
+margin:5px 0;
+}
+
+.correct-text{
+color:#2e7d32;
+font-weight:bold;
+}
+
+.wrong-text{
+color:#d32f2f;
+font-weight:bold;
+}
+
+.notanswer-text{
+color:#777;
+font-weight:bold;
+}
+
+.explanation{
+background:#f4f7fb;
+border-left:4px solid #0b57d0;
+padding:11px;
+border-radius:6px;
+line-height:1.55;
+font-size:14px;
+margin-top:10px;
+}
 
 @media(max-width:900px){
 
-.exam-grid{
-    grid-template-columns:repeat(2,1fr);
+.test-layout{
+grid-template-columns:1fr;
+}
+
+.side-panel{
+position:static;
+}
+
+.performance{
+grid-template-columns:repeat(2,1fr);
 }
 
 }
 
 @media(max-width:600px){
 
-.exam-grid{
-    grid-template-columns:1fr;
+.header-inner{
+align-items:flex-start;
 }
 
-.result-stats{
-    grid-template-columns:repeat(2,1fr);
+.logo-area h2{
+font-size:18px;
 }
 
-.question-area,
-.test-start,
-.test-result{
-    padding:18px;
+.timer{
+font-size:15px;
+min-width:90px;
 }
 
-.mock-heading h2{
-    font-size:27px;
+.exam-bar-inner{
+align-items:flex-start;
+flex-direction:column;
+}
+
+.question-body{
+padding:20px 15px;
+min-height:350px;
+}
+
+.question-text{
+font-size:17px;
+}
+
+.actions button{
+font-size:11px;
+padding:10px;
+}
+
+.next-btn{
+margin-left:0;
+}
+
+.performance{
+grid-template-columns:1fr 1fr;
 }
 
 }
 
 </style>
 
+</head>
 
-<section class="mock-system" id="mocktest">
+<body>
 
-<div class="mock-container">
+<header>
 
-<div class="mock-heading">
+<div class="header-inner">
 
-<h2>🎯 Online Mock Test Series</h2>
+<div class="logo-area">
+<h2>AMAN MOCK TEST</h2>
+<p>Professional Online Examination Platform</p>
+</div>
 
-<p>
-अपना Exam चुनें • Free Test दें • Result देखें • PDF Download करें
-</p>
+<div class="timer-area">
+
+<div>
+<div class="timer-label">TIME LEFT</div>
+</div>
+
+<div class="timer" id="timer">
+00:00:00
+</div>
+
+</div>
+
+</div>
+
+</header>
+
+
+<div class="exam-bar">
+
+<div class="exam-bar-inner">
+
+<div class="exam-name">
+
+<h3 id="examTitle">
+Loading Test...
+</h3>
+
+<p id="examName"></p>
+
+</div>
+
+<div class="exam-stats">
+
+<div class="stat-badge" id="questionBadge">
+100 Questions
+</div>
+
+<div class="stat-badge" id="marksBadge">
+100 Marks
+</div>
+
+<div class="stat-badge" id="negativeBadge">
+No Negative Marking
+</div>
+
+</div>
+
+</div>
 
 </div>
 
 
-<div class="exam-search">
+<div class="main" id="testArea">
 
-<input
-type="text"
-id="examSearch"
-placeholder="🔍 Exam खोजें — Bihar Police, SSC, Railway..."
-onkeyup="searchExam()">
+<div class="test-layout">
+
+<div class="question-panel">
+
+<div class="question-top">
+
+<div class="question-number" id="qNumber">
+Question 1
+</div>
+
+<div class="question-status" id="qStatus">
+Not Answered
+</div>
+
+</div>
+
+<div class="question-body">
+
+<div class="subject" id="subjectName">
+GENERAL STUDIES
+</div>
+
+<div class="question-text" id="questionText"></div>
+
+<div id="optionsBox"></div>
 
 </div>
 
 
-<div class="exam-grid" id="examGrid"></div>
+<div class="actions">
+
+<button class="prev-btn"
+onclick="previousQuestion()">
+← Previous
+</button>
+
+<button class="clear-btn"
+onclick="clearResponse()">
+Clear Response
+</button>
+
+<button class="review-btn"
+onclick="markReview()">
+Mark for Review
+</button>
+
+<button class="next-btn"
+onclick="saveAndNext()">
+Save & Next →
+</button>
+
+</div>
+
+</div>
 
 
-<!-- TEST SCREEN -->
+<div class="side-panel">
 
-<div class="test-screen" id="testScreen">
+<div class="side-header">
 
-<div class="test-header">
+<h3>Question Palette</h3>
 
-<h2 id="selectedExamTitle">
-Mock Test
+<p>किसी भी प्रश्न पर जाने के लिए नंबर चुनें</p>
+
+</div>
+
+
+<div class="counters">
+
+<div class="counter">
+<span class="legend-notvisited"></span>
+<div>
+Not Visited
+<strong id="notVisitedCount">0</strong>
+</div>
+</div>
+
+<div class="counter">
+<span class="legend-answered"></span>
+<div>
+Answered
+<strong id="answeredCount">0</strong>
+</div>
+</div>
+
+<div class="counter">
+<span class="legend-notanswered"></span>
+<div>
+Not Answered
+<strong id="notAnsweredCount">0</strong>
+</div>
+</div>
+
+<div class="counter">
+<span class="legend-review"></span>
+<div>
+Review
+<strong id="reviewCount">0</strong>
+</div>
+</div>
+
+</div>
+
+
+<div class="palette-wrap">
+
+<div class="palette-title">
+Questions
+</div>
+
+<div class="palette"
+id="palette">
+</div>
+
+</div>
+
+
+<div class="submit-wrap">
+
+<button class="submit-btn"
+onclick="submitTest(false)">
+
+Submit Test
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="result-screen"
+id="resultArea">
+
+<div class="result-card">
+
+<div class="result-header">
+
+<h1>🎉 Test Completed</h1>
+
+<p id="resultExamTitle"></p>
+
+</div>
+
+
+<div class="performance">
+
+<div class="performance-box">
+<h2 id="score"></h2>
+<p>Final Score</p>
+</div>
+
+<div class="performance-box">
+<h2 id="correctCount"></h2>
+<p>Correct</p>
+</div>
+
+<div class="performance-box">
+<h2 id="wrongCount"></h2>
+<p>Wrong</p>
+</div>
+
+<div class="performance-box">
+<h2 id="unansweredResult"></h2>
+<p>Unanswered</p>
+</div>
+
+<div class="performance-box">
+<h2 id="percentage"></h2>
+<p>Percentage</p>
+</div>
+
+</div>
+
+
+<div class="result-actions">
+
+<button class="home-btn"
+onclick="goHome()">
+← Back to Dashboard
+</button>
+
+<button class="retry-btn"
+onclick="retryTest()">
+Retry Test
+</button>
+
+</div>
+
+
+<div class="solution-section">
+
+<h2>
+Detailed Answer & Explanation
 </h2>
 
-<p id="selectedExamInfo"></p>
-
-</div>
-
-
-<div class="test-start" id="testStart">
-
-<h3>👤 Candidate Details</h3>
-
-<input
-type="text"
-id="candidateInput"
-placeholder="अपना पूरा नाम लिखें">
-
-<br>
-
-<button
-class="begin-btn"
-onclick="beginTest()">
-
-▶ Start Test
-
-</button>
-
-<button
-class="close-test"
-onclick="closeTest()">
-
-✕ Close
-
-</button>
-
-</div>
-
-
-<!-- QUESTIONS -->
-
-<div class="question-area" id="questionArea">
-
-<div class="exam-info">
-
-<span id="candidateDisplay"></span>
-
-<span id="questionNumber"></span>
-
-<span class="exam-timer">
-
-⏱
-<span id="examTimer"></span>
-
-</span>
-
-</div>
-
-
-<div class="progress-bg">
-
-<div
-class="progress-fill"
-id="testProgress">
-</div>
-
-</div>
-
-
-<div
-class="question-card"
-id="questionCard">
-</div>
-
-
-<div class="test-navigation">
-
-<button
-class="nav-test-btn previous-btn"
-onclick="previousExamQuestion()">
-
-← Previous
-
-</button>
-
-
-<button
-class="nav-test-btn next-btn"
-id="nextExamButton"
-onclick="nextExamQuestion()">
-
-Next →
-
-</button>
-
-</div>
-
-
-<div
-class="question-palette"
-id="testPalette">
-</div>
-
-</div>
-
-
-<!-- RESULT -->
-
-<div
-class="test-result"
-id="testResult">
-
-<h2>🎉 आपका Result</h2>
-
-<h3 id="resultCandidate"></h3>
-
-<p id="resultExam"></p>
-
-
-<div class="score-circle">
-
-<strong id="finalScore">
-0
-</strong>
-
-<span id="finalPercentage">
-0%
-</span>
-
-</div>
-
-
-<h2 id="performanceMessage"></h2>
-
-
-<div class="result-stats">
-
-<div class="result-item">
-
-<strong id="correctAnswers">
-0
-</strong>
-
-✅ सही
-
-</div>
-
-
-<div class="result-item">
-
-<strong id="wrongAnswers">
-0
-</strong>
-
-❌ गलत
-
-</div>
-
-
-<div class="result-item">
-
-<strong id="notAnswered">
-0
-</strong>
-
-⭕ छोड़े
-
-</div>
-
-
-<div class="result-item">
-
-<strong id="totalQuestions">
-0
-</strong>
-
-📝 कुल
-
-</div>
-
-</div>
-
-
-<div
-class="answer-review"
-id="answerReview">
-</div>
-
-
-<button
-class="restart-test"
-onclick="restartCurrentTest()">
-
-🔄 फिर से Test दें
-
-</button>
+<div id="resultList"></div>
 
 </div>
 
@@ -667,1015 +840,265 @@ onclick="restartCurrentTest()">
 
 </div>
 
-</section>
+
+<!-- CENTRAL QUESTION BANK -->
+
+<script src="questions.js"></script>
 
 
 <script>
 
-/* =========================================================
-   EXAM DATABASE
-   नया Exam/Test मुख्य रूप से यहीं जोड़ना है
-========================================================= */
-
-const examData = [
-
-{
-id:"bihar-police",
-name:"Bihar Police Constable",
-icon:"👮",
-time:120,
-pdf:"pdf/bihar-police-01.pdf",
-
-questions:[
-
-{
-q:"बिहार की राजधानी क्या है?",
-o:["गया","पटना","भागलपुर","दरभंगा"],
-a:1
-},
-
-{
-q:"बिहार दिवस कब मनाया जाता है?",
-o:["22 मार्च","15 अगस्त","26 जनवरी","2 अक्टूबर"],
-a:0
-},
-
-{
-q:"चंपारण सत्याग्रह किस वर्ष हुआ था?",
-o:["1915","1917","1920","1930"],
-a:1
-},
-
-{
-q:"भारत का संविधान कब लागू हुआ?",
-o:["15 अगस्त 1947","26 जनवरी 1950","26 नवंबर 1949","2 अक्टूबर 1950"],
-a:1
-},
-
-{
-q:"मानव शरीर में रक्त को पंप कौन करता है?",
-o:["फेफड़ा","हृदय","मस्तिष्क","गुर्दा"],
-a:1
-},
-
-{
-q:"25 + 35 कितना होगा?",
-o:["50","60","70","80"],
-a:1
-},
-
-{
-q:"भारत का राष्ट्रीय पशु कौन है?",
-o:["हाथी","बाघ","शेर","घोड़ा"],
-a:1
-},
-
-{
-q:"पानी का रासायनिक सूत्र क्या है?",
-o:["CO2","H2O","O2","NaCl"],
-a:1
-},
-
-{
-q:"Computer का Brain किसे कहा जाता है?",
-o:["Monitor","CPU","Mouse","Keyboard"],
-a:1
-},
-
-{
-q:"WWW का पूरा नाम क्या है?",
-o:["World Wide Web","Wide World Web","World Web Window","Web World Wide"],
-a:0
-}
-
-]
-
-},
-
-
-/* =========================
-   BIHAR POLICE SI
-========================= */
-
-{
-id:"bihar-si",
-name:"Bihar Police SI",
-icon:"⭐",
-time:120,
-pdf:"pdf/bihar-si-01.pdf",
-
-questions:[
-
-{
-q:"भारतीय संविधान की प्रारूप समिति के अध्यक्ष कौन थे?",
-o:["राजेंद्र प्रसाद","बी. आर. अंबेडकर","जवाहरलाल नेहरू","सरदार पटेल"],
-a:1
-},
-
-{
-q:"भारत का सर्वोच्च न्यायालय कहाँ स्थित है?",
-o:["पटना","मुंबई","नई दिल्ली","कोलकाता"],
-a:2
-},
-
-{
-q:"राज्यसभा को क्या कहा जाता है?",
-o:["निम्न सदन","उच्च सदन","लोक सदन","जन सदन"],
-a:1
-},
-
-{
-q:"भारत में मतदान की न्यूनतम आयु कितनी है?",
-o:["16","18","21","25"],
-a:1
-},
-
-{
-q:"भारत का संवैधानिक प्रमुख कौन होता है?",
-o:["प्रधानमंत्री","राष्ट्रपति","मुख्य न्यायाधीश","गृह मंत्री"],
-a:1
-}
-
-]
-
-},
-
-
-/* =========================
-   BSSC
-========================= */
-
-{
-id:"bssc",
-name:"BSSC",
-icon:"🏛️",
-time:120,
-pdf:"pdf/bssc-01.pdf",
-
-questions:[
-
-{
-q:"विक्रमशिला विश्वविद्यालय की स्थापना किसने की थी?",
-o:["अशोक","धर्मपाल","हर्ष","चंद्रगुप्त"],
-a:1
-},
-
-{
-q:"शेरशाह सूरी का मकबरा कहाँ है?",
-o:["सासाराम","गया","पटना","बक्सर"],
-a:0
-},
-
-{
-q:"सोन नदी किसकी सहायक नदी है?",
-o:["यमुना","गंगा","कोसी","गंडक"],
-a:1
-},
-
-{
-q:"राजगीर किस जिले में स्थित है?",
-o:["गया","पटना","नालंदा","वैशाली"],
-a:2
-},
-
-{
-q:"कोसी नदी को किस नाम से जाना जाता है?",
-o:["बिहार का शोक","दक्षिण गंगा","बिहार की जीवनरेखा","नीली नदी"],
-a:0
-}
-
-]
-
-},
-
-
-/* =========================
-   SSC CGL
-========================= */
-
-{
-id:"ssc-cgl",
-name:"SSC CGL",
-icon:"📚",
-time:60,
-pdf:"pdf/ssc-cgl-01.pdf",
-
-questions:[
-
-{
-q:"√144 का मान क्या है?",
-o:["10","11","12","14"],
-a:2
-},
-
-{
-q:"500 का 20 प्रतिशत कितना है?",
-o:["50","100","150","200"],
-a:1
-},
-
-{
-q:"15 का वर्ग कितना है?",
-o:["125","225","250","215"],
-a:1
-},
-
-{
-q:"What is the synonym of Big?",
-o:["Small","Large","Thin","Short"],
-a:1
-},
-
-{
-q:"Past tense of Go is:",
-o:["Goed","Went","Gone","Going"],
-a:1
-}
-
-]
-
-},
-
-
-/* =========================
-   SSC CHSL
-========================= */
-
-{
-id:"ssc-chsl",
-name:"SSC CHSL",
-icon:"📝",
-time:60,
-pdf:"pdf/ssc-chsl-01.pdf",
-
-questions:[
-
-{
-q:"1 किलोमीटर में कितने मीटर होते हैं?",
-o:["100","500","1000","1500"],
-a:2
-},
-
-{
-q:"3/4 का दशमलव रूप क्या है?",
-o:["0.25","0.50","0.75","1.25"],
-a:2
-},
-
-{
-q:"एक दर्जन में कितनी वस्तुएँ होती हैं?",
-o:["10","12","14","16"],
-a:1
-},
-
-{
-q:"Opposite of Hot is:",
-o:["Warm","Cold","Heat","Boil"],
-a:1
-},
-
-{
-q:"Plural of Child is:",
-o:["Childs","Children","Childes","Childrens"],
-a:1
-}
-
-]
-
-},
-
-
-/* =========================
-   SSC MTS
-========================= */
-
-{
-id:"ssc-mts",
-name:"SSC MTS",
-icon:"📋",
-time:90,
-pdf:"pdf/ssc-mts-01.pdf",
-
-questions:[
-
-{
-q:"100 - 47 कितना है?",
-o:["53","57","63","43"],
-a:0
-},
-
-{
-q:"12 × 8 कितना है?",
-o:["86","96","108","88"],
-a:1
-},
-
-{
-q:"1 घंटे में कितने मिनट होते हैं?",
-o:["30","45","60","90"],
-a:2
-},
-
-{
-q:"'जल' का पर्यायवाची क्या है?",
-o:["नीर","अग्नि","वायु","आकाश"],
-a:0
-},
-
-{
-q:"'लाभ' का विलोम क्या है?",
-o:["धन","हानि","आय","फायदा"],
-a:1
-}
-
-]
-
-},
-
-
-/* =========================
-   RAILWAY NTPC
-========================= */
-
-{
-id:"railway-ntpc",
-name:"Railway NTPC",
-icon:"🚆",
-time:90,
-pdf:"pdf/railway-ntpc-01.pdf",
-
-questions:[
-
-{
-q:"विद्युत धारा की SI इकाई क्या है?",
-o:["वोल्ट","एम्पियर","वाट","ओम"],
-a:1
-},
-
-{
-q:"बल की SI इकाई क्या है?",
-o:["जूल","न्यूटन","वाट","मीटर"],
-a:1
-},
-
-{
-q:"कार्य की SI इकाई क्या है?",
-o:["जूल","न्यूटन","एम्पियर","वोल्ट"],
-a:0
-},
-
-{
-q:"पृथ्वी का प्राकृतिक उपग्रह कौन है?",
-o:["सूर्य","चंद्रमा","मंगल","शुक्र"],
-a:1
-},
-
-{
-q:"अरब सागर भारत के किस ओर है?",
-o:["पूर्व","पश्चिम","उत्तर","दक्षिण"],
-a:1
-}
-
-]
-
-},
-
-
-/* =========================
-   RAILWAY GROUP D
-========================= */
-
-{
-id:"railway-group-d",
-name:"Railway Group D",
-icon:"🚉",
-time:90,
-pdf:"pdf/railway-group-d-01.pdf",
-
-questions:[
-
-{
-q:"विटामिन C की कमी से कौन सा रोग होता है?",
-o:["रिकेट्स","स्कर्वी","रातांधता","बेरी-बेरी"],
-a:1
-},
-
-{
-q:"विटामिन D की कमी से कौन सा रोग होता है?",
-o:["स्कर्वी","रिकेट्स","एनीमिया","बेरी-बेरी"],
-a:1
-},
-
-{
-q:"मानव शरीर में कितनी हड्डियाँ होती हैं?",
-o:["206","208","210","212"],
-a:0
-},
-
-{
-q:"पौधे भोजन किस प्रक्रिया से बनाते हैं?",
-o:["श्वसन","प्रकाश संश्लेषण","पाचन","वाष्पीकरण"],
-a:1
-},
-
-{
-q:"ऑक्सीजन का रासायनिक संकेत क्या है?",
-o:["O","H","N","C"],
-a:0
-}
-
-]
-
-},
-
-
-/* =========================
-   BIHAR HOME GUARD
-========================= */
-
-{
-id:"home-guard",
-name:"Bihar Home Guard",
-icon:"🛡️",
-time:60,
-pdf:"pdf/home-guard-01.pdf",
-
-questions:[
-
-{
-q:"भारत को स्वतंत्रता कब मिली?",
-o:["15 अगस्त 1947","26 जनवरी 1950","9 अगस्त 1942","2 अक्टूबर 1947"],
-a:0
-},
-
-{
-q:"भारत छोड़ो आंदोलन कब शुरू हुआ?",
-o:["1930","1942","1920","1947"],
-a:1
-},
-
-{
-q:"प्लासी का युद्ध कब हुआ?",
-o:["1757","1764","1857","1773"],
-a:0
-},
-
-{
-q:"बक्सर का युद्ध कब हुआ?",
-o:["1757","1764","1857","1942"],
-a:1
-},
-
-{
-q:"मौर्य साम्राज्य के संस्थापक कौन थे?",
-o:["अशोक","चंद्रगुप्त मौर्य","बिंदुसार","हर्ष"],
-a:1
-}
-
-]
-
-},
-
-
-/* =========================
-   BANKING
-========================= */
-
-{
-id:"banking",
-name:"Banking Exam",
-icon:"🏦",
-time:60,
-pdf:"pdf/banking-01.pdf",
-
-questions:[
-
-{
-q:"यदि 5 पेन की कीमत ₹50 है तो एक पेन की कीमत कितनी होगी?",
-o:["₹5","₹10","₹15","₹20"],
-a:1
-},
-
-{
-q:"200 का 10 प्रतिशत कितना है?",
-o:["10","20","30","40"],
-a:1
-},
-
-{
-q:"2 घंटे 30 मिनट में कितने मिनट होते हैं?",
-o:["120","130","150","180"],
-a:2
-},
-
-{
-q:"144 ÷ 12 कितना होगा?",
-o:["10","11","12","14"],
-a:2
-},
-
-{
-q:"2, 4, 6, 8 के बाद क्या आएगा?",
-o:["9","10","11","12"],
-a:1
-}
-
-]
+/* ======================================================
+   GET SELECTED TEST
+====================================================== */
+
+const params =
+new URLSearchParams(window.location.search);
+
+const selectedTestId =
+params.get("test") || "biharPolice01";
+
+const activeTest =
+getTestById(selectedTestId);
+
+const questions =
+activeTest.questions;
+
+
+/* ======================================================
+   BASIC VARIABLES
+====================================================== */
+
+let currentQuestion=0;
+
+let answers =
+new Array(questions.length).fill(null);
+
+let status =
+new Array(questions.length).fill("notvisited");
+
+let testSubmitted=false;
+
+let timerInterval=null;
+
+let totalSeconds =
+activeTest.duration * 60;
+
+
+/* ======================================================
+   EXAM DETAILS
+====================================================== */
+
+function loadExamInformation(){
+
+document.getElementById("examTitle")
+.innerText=activeTest.title;
+
+document.getElementById("examName")
+.innerText=activeTest.exam;
+
+document.getElementById("questionBadge")
+.innerText=
+questions.length+" Questions";
+
+document.getElementById("marksBadge")
+.innerText=
+activeTest.marks+" Marks";
+
+if(activeTest.negativeMarking>0){
+
+document.getElementById("negativeBadge")
+.innerText=
+"-"+
+activeTest.negativeMarking+
+" Negative Marking";
+
+}else{
+
+document.getElementById("negativeBadge")
+.innerText=
+"No Negative Marking";
 
 }
 
-];
+}
 
 
-/* =========================================================
-   SYSTEM VARIABLES
-========================================================= */
+/* ======================================================
+   LOAD QUESTION
+====================================================== */
 
-let activeExam = null;
+function loadQuestion(){
 
-let activeQuestion = 0;
+if(status[currentQuestion]==="notvisited"){
 
-let userAnswers = [];
+status[currentQuestion]="notanswered";
 
-let remainingTime = 0;
+}
 
-let examTimerInterval = null;
+const q =
+questions[currentQuestion];
 
+document.getElementById("qNumber")
+.innerText=
+"Question "+
+(currentQuestion+1)+
+" of "+
+questions.length;
 
-/* =========================================================
-   CREATE EXAM CARDS AUTOMATICALLY
-========================================================= */
+document.getElementById("questionText")
+.innerText=q.q;
 
-function loadExamCards(){
+const optionsBox =
+document.getElementById("optionsBox");
 
-const grid =
-document.getElementById("examGrid");
+optionsBox.innerHTML="";
 
-grid.innerHTML="";
+q.options.forEach(
+(option,index)=>{
 
-
-examData.forEach(function(exam){
-
-let card =
+const div =
 document.createElement("div");
 
-card.className="exam-card";
-
-card.innerHTML=`
-
-<div class="exam-icon">
-${exam.icon}
-</div>
-
-<h3>
-${exam.name}
-</h3>
-
-<div class="exam-meta">
-${exam.questions.length} Questions • ${exam.time} Minutes
-</div>
-
-<div class="exam-buttons">
-
-<button
-class="start-exam"
-onclick="selectExam('${exam.id}')">
-
-▶ Start Mock Test
-
-</button>
-
-<a
-class="view-pdf"
-href="${exam.pdf}"
-target="_blank">
-
-📄 View Question PDF
-
-</a>
-
-<a
-class="download-pdf"
-href="${exam.pdf}"
-download>
-
-⬇ Download PDF
-
-</a>
-
-</div>
-
-`;
-
-grid.appendChild(card);
-
-});
-
-}
-
-
-/* =========================================================
-   EXAM SEARCH
-========================================================= */
-
-function searchExam(){
-
-let search =
-document
-.getElementById("examSearch")
-.value
-.toLowerCase();
-
-document
-.querySelectorAll(".exam-card")
-.forEach(function(card){
-
-card.style.display =
-
-card.innerText
-.toLowerCase()
-.includes(search)
-
-?
-
-"block"
-
-:
-
-"none";
-
-});
-
-}
-
-
-/* =========================================================
-   SELECT EXAM
-========================================================= */
-
-function selectExam(id){
-
-activeExam =
-examData.find(
-exam => exam.id === id
-);
-
-activeQuestion = 0;
-
-userAnswers =
-new Array(
-activeExam.questions.length
-).fill(null);
-
-
-document
-.getElementById("selectedExamTitle")
-.innerText =
-
-activeExam.icon
-+
-" "
-+
-activeExam.name;
-
-
-document
-.getElementById("selectedExamInfo")
-.innerText =
-
-activeExam.questions.length
-+
-" Questions • "
-+
-activeExam.time
-+
-" Minutes";
-
-
-document
-.getElementById("testScreen")
-.style.display="block";
-
-
-document
-.getElementById("testStart")
-.style.display="block";
-
-
-document
-.getElementById("questionArea")
-.style.display="none";
-
-
-document
-.getElementById("testResult")
-.style.display="none";
-
-
-document
-.getElementById("candidateInput")
-.value="";
-
-
-document
-.getElementById("testScreen")
-.scrollIntoView({
-behavior:"smooth"
-});
-
-}
-
-
-/* =========================================================
-   START TEST
-========================================================= */
-
-function beginTest(){
-
-let candidate =
-document
-.getElementById("candidateInput")
-.value
-.trim();
-
-
-if(candidate===""){
-
-alert(
-"कृपया अपना नाम लिखें।"
-);
-
-return;
-
-}
-
-
-document
-.getElementById("candidateDisplay")
-.innerText =
-"👤 " + candidate;
-
-
-document
-.getElementById("testStart")
-.style.display="none";
-
-
-document
-.getElementById("questionArea")
-.style.display="block";
-
-
-remainingTime =
-activeExam.time * 60;
-
-
-createTestPalette();
-
-showExamQuestion();
-
-startExamTimer();
-
-}
-
-
-/* =========================================================
-   SHOW QUESTION
-========================================================= */
-
-function showExamQuestion(){
-
-let question =
-activeExam.questions[
-activeQuestion
-];
-
-
-document
-.getElementById("questionNumber")
-.innerText =
-
-"Question "
-+
-(activeQuestion + 1)
-+
-" / "
-+
-activeExam.questions.length;
-
-
-let html = `
-
-<div class="question-no">
-
-Question ${activeQuestion + 1}
-
-</div>
-
-<div class="question-text">
-
-${question.q}
-
-</div>
-
-`;
-
-
-question.o.forEach(
-function(option,index){
-
-let checked =
-
-userAnswers[activeQuestion]
-=== index
-
-?
-
-"checked"
-
-:
-
-"";
-
-
-html += `
-
-<label class="answer-option">
-
-<input
-type="radio"
-name="mockAnswer"
-${checked}
-
-onchange="saveExamAnswer(${index})">
-
-${String.fromCharCode(65+index)}.
-${option}
-
-</label>
-
-`;
-
-});
-
-
-document
-.getElementById("questionCard")
-.innerHTML =
-html;
-
-
-let percentage =
-
-(
-(activeQuestion + 1)
-
-/ activeExam.questions.length
-
-) * 100;
-
-
-document
-.getElementById("testProgress")
-.style.width =
-
-percentage + "%";
-
-
-let next =
-document
-.getElementById("nextExamButton");
-
+div.className="option";
 
 if(
-activeQuestion
-===
-activeExam.questions.length - 1
+answers[currentQuestion]===index
 ){
 
-next.innerText =
-"✓ Submit Test";
-
-next.className =
-"nav-test-btn final-submit";
+div.classList.add("selected");
 
 }
 
+div.innerHTML=
+
+'<div class="option-letter">'+
+String.fromCharCode(65+index)+
+'</div>'+
+
+'<div>'+
+option+
+'</div>';
+
+div.onclick=function(){
+
+selectAnswer(index);
+
+};
+
+optionsBox.appendChild(div);
+
+});
+
+updateQuestionStatus();
+
+renderPalette();
+
+updateCounters();
+
+}
+
+
+/* ======================================================
+   SELECT ANSWER
+====================================================== */
+
+function selectAnswer(index){
+
+answers[currentQuestion]=index;
+
+status[currentQuestion]="answered";
+
+loadQuestion();
+
+}
+
+
+/* ======================================================
+   QUESTION STATUS
+====================================================== */
+
+function updateQuestionStatus(){
+
+const element =
+document.getElementById("qStatus");
+
+let value =
+status[currentQuestion];
+
+if(value==="answered"){
+
+element.innerText="Answered";
+
+element.style.background="#e3f4e5";
+
+element.style.color="#216e28";
+
+}
+else if(value==="review"){
+
+element.innerText="Marked for Review";
+
+element.style.background="#f3e5f5";
+
+element.style.color="#7b1fa2";
+
+}
 else{
 
-next.innerText =
-"Next →";
+element.innerText="Not Answered";
 
-next.className =
-"nav-test-btn next-btn";
+element.style.background="#ffebee";
 
-}
-
-
-updateTestPalette();
-
-}
-
-
-/* =========================================================
-   SAVE ANSWER
-========================================================= */
-
-function saveExamAnswer(index){
-
-userAnswers[
-activeQuestion
-] = index;
-
-updateTestPalette();
-
-}
-
-
-/* =========================================================
-   NEXT
-========================================================= */
-
-function nextExamQuestion(){
-
-if(
-activeQuestion
-<
-activeExam.questions.length - 1
-){
-
-activeQuestion++;
-
-showExamQuestion();
-
-}
-
-else{
-
-if(
-confirm(
-"क्या आप Mock Test Submit करना चाहते हैं?"
-)
-){
-
-finishExam();
-
-}
+element.style.color="#c62828";
 
 }
 
 }
 
 
-/* =========================================================
-   PREVIOUS
-========================================================= */
+/* ======================================================
+   QUESTION PALETTE
+====================================================== */
 
-function previousExamQuestion(){
+function renderPalette(){
 
-if(activeQuestion > 0){
-
-activeQuestion--;
-
-showExamQuestion();
-
-}
-
-}
-
-
-/* =========================================================
-   PALETTE
-========================================================= */
-
-function createTestPalette(){
-
-let palette =
-document
-.getElementById("testPalette");
+const palette =
+document.getElementById("palette");
 
 palette.innerHTML="";
 
+questions.forEach(
+(q,index)=>{
 
-activeExam.questions
-.forEach(
-function(question,index){
-
-let button =
+const button =
 document.createElement("button");
 
-button.className =
-"palette-question";
+button.className="qbtn";
 
-button.innerText =
-index + 1;
+if(status[index]==="answered"){
+button.classList.add("answered");
+}
 
-button.onclick =
-function(){
+if(status[index]==="notanswered"){
+button.classList.add("notanswered");
+}
 
-activeQuestion=index;
+if(status[index]==="review"){
+button.classList.add("review");
+}
 
-showExamQuestion();
+if(index===currentQuestion){
+button.classList.add("current");
+}
+
+button.innerText=index+1;
+
+button.onclick=function(){
+
+currentQuestion=index;
+
+loadQuestion();
 
 };
 
@@ -1686,160 +1109,228 @@ palette.appendChild(button);
 }
 
 
-function updateTestPalette(){
+/* ======================================================
+   COUNTERS
+====================================================== */
 
-let buttons =
-document
-.querySelectorAll(".palette-question");
+function updateCounters(){
 
+let answered =
+status.filter(
+s=>s==="answered"
+).length;
 
-buttons.forEach(
-function(button,index){
+let notAnswered =
+status.filter(
+s=>s==="notanswered"
+).length;
 
-button.className =
-"palette-question";
+let review =
+status.filter(
+s=>s==="review"
+).length;
 
+let notVisited =
+status.filter(
+s=>s==="notvisited"
+).length;
 
-if(
-userAnswers[index]
-!== null
-){
+document.getElementById("answeredCount")
+.innerText=answered;
 
-button.classList.add(
-"done"
-);
+document.getElementById("notAnsweredCount")
+.innerText=notAnswered;
+
+document.getElementById("reviewCount")
+.innerText=review;
+
+document.getElementById("notVisitedCount")
+.innerText=notVisited;
 
 }
 
 
-if(
-index === activeQuestion
-){
+/* ======================================================
+   SAVE & NEXT
+====================================================== */
 
-button.classList.add(
-"current"
-);
+function saveAndNext(){
+
+if(currentQuestion <
+questions.length-1){
+
+currentQuestion++;
+
+loadQuestion();
 
 }
 
-});
+}
+
+
+/* ======================================================
+   PREVIOUS
+====================================================== */
+
+function previousQuestion(){
+
+if(currentQuestion>0){
+
+currentQuestion--;
+
+loadQuestion();
+
+}
 
 }
 
 
-/* =========================================================
+/* ======================================================
+   CLEAR RESPONSE
+====================================================== */
+
+function clearResponse(){
+
+answers[currentQuestion]=null;
+
+status[currentQuestion]="notanswered";
+
+loadQuestion();
+
+}
+
+
+/* ======================================================
+   MARK REVIEW
+====================================================== */
+
+function markReview(){
+
+status[currentQuestion]="review";
+
+if(currentQuestion <
+questions.length-1){
+
+currentQuestion++;
+
+}
+
+loadQuestion();
+
+}
+
+
+/* ======================================================
    TIMER
-========================================================= */
+====================================================== */
 
-function startExamTimer(){
-
-clearInterval(
-examTimerInterval
-);
-
+function startTimer(){
 
 updateTimerDisplay();
 
+timerInterval =
+setInterval(function(){
 
-examTimerInterval =
-
-setInterval(
-function(){
-
-remainingTime--;
+totalSeconds--;
 
 updateTimerDisplay();
 
+if(totalSeconds<=0){
 
-if(
-remainingTime <= 0
-){
+clearInterval(timerInterval);
 
-clearInterval(
-examTimerInterval
-);
-
-alert(
-"समय समाप्त हो गया। आपका Test Submit किया जा रहा है।"
-);
-
-finishExam();
+submitTest(true);
 
 }
 
-},
-1000
-);
+},1000);
 
 }
 
 
 function updateTimerDisplay(){
 
-let hours =
+let hrs =
+Math.floor(totalSeconds/3600);
+
+let mins =
 Math.floor(
-remainingTime / 3600
+(totalSeconds%3600)/60
 );
 
+let secs =
+totalSeconds%60;
 
-let minutes =
-Math.floor(
-(remainingTime % 3600)
-/ 60
-);
+document.getElementById("timer")
+.innerText=
 
+String(hrs).padStart(2,"0")
++":"+
 
-let seconds =
-remainingTime % 60;
+String(mins).padStart(2,"0")
++":"+
 
-
-let display="";
-
-
-if(hours > 0){
-
-display +=
-String(hours)
-.padStart(2,"0")
-+
-":";
+String(secs).padStart(2,"0");
 
 }
 
 
-display +=
+/* ======================================================
+   SUBMIT TEST
+====================================================== */
 
-String(minutes)
-.padStart(2,"0")
+function submitTest(autoSubmit){
 
-+
+if(testSubmitted){
+return;
+}
 
-":"
+let attempted =
+answers.filter(
+a=>a!==null
+).length;
 
-+
+let unanswered =
+questions.length-attempted;
 
-String(seconds)
-.padStart(2,"0");
+if(!autoSubmit){
 
+let confirmation =
+confirm(
 
-document
-.getElementById("examTimer")
-.innerText =
-display;
+"क्या आप Test Submit करना चाहते हैं?\n\n"+
+
+"Total Questions: "+
+questions.length+"\n"+
+
+"Attempted: "+
+attempted+"\n"+
+
+"Unanswered: "+
+unanswered
+
+);
+
+if(!confirmation){
+return;
+}
+
+}
+
+testSubmitted=true;
+
+clearInterval(timerInterval);
+
+calculateResult();
 
 }
 
 
-/* =========================================================
-   FINISH + RESULT
-========================================================= */
+/* ======================================================
+   RESULT
+====================================================== */
 
-function finishExam(){
-
-clearInterval(
-examTimerInterval
-);
-
+function calculateResult(){
 
 let correct=0;
 
@@ -1847,26 +1338,21 @@ let wrong=0;
 
 let unanswered=0;
 
+questions.forEach(
+(q,index)=>{
 
-userAnswers.forEach(
-function(answer,index){
-
-if(answer === null){
+if(answers[index]===null){
 
 unanswered++;
 
 }
-
 else if(
-answer
-===
-activeExam.questions[index].a
+answers[index]===q.answer
 ){
 
 correct++;
 
 }
-
 else{
 
 wrong++;
@@ -1875,265 +1361,186 @@ wrong++;
 
 });
 
+let marksPerQuestion =
+activeTest.marks /
+questions.length;
+
+let positiveMarks =
+correct *
+marksPerQuestion;
+
+let negativeMarks =
+wrong *
+activeTest.negativeMarking;
+
+let finalScore =
+positiveMarks -
+negativeMarks;
+
+if(finalScore<0){
+finalScore=0;
+}
 
 let percentage =
+(
+(finalScore /
+activeTest.marks)*100
+).toFixed(2);
 
-Math.round(
-
-(correct /
-activeExam.questions.length)
-
-* 100
-
-);
-
-
-document
-.getElementById("questionArea")
+document.getElementById("testArea")
 .style.display="none";
 
-
-document
-.getElementById("testResult")
+document.getElementById("resultArea")
 .style.display="block";
 
+document.getElementById("resultExamTitle")
+.innerText=
+activeTest.title;
 
-let candidate =
+document.getElementById("score")
+.innerText=
+finalScore.toFixed(2)
++"/"+
+activeTest.marks;
 
-document
-.getElementById("candidateInput")
-.value;
+document.getElementById("correctCount")
+.innerText=correct;
 
+document.getElementById("wrongCount")
+.innerText=wrong;
 
-document
-.getElementById("resultCandidate")
-.innerText =
+document.getElementById("unansweredResult")
+.innerText=unanswered;
 
-"👤 "
-+
-candidate;
+document.getElementById("percentage")
+.innerText=percentage+"%";
 
+createSolutions();
 
-document
-.getElementById("resultExam")
-.innerText =
-
-activeExam.name;
-
-
-document
-.getElementById("finalScore")
-.innerText =
-
-correct
-+
-"/"
-+
-activeExam.questions.length;
-
-
-document
-.getElementById("finalPercentage")
-.innerText =
-
-percentage
-+
-"%";
-
-
-document
-.getElementById("correctAnswers")
-.innerText =
-correct;
-
-
-document
-.getElementById("wrongAnswers")
-.innerText =
-wrong;
-
-
-document
-.getElementById("notAnswered")
-.innerText =
-unanswered;
-
-
-document
-.getElementById("totalQuestions")
-.innerText =
-
-activeExam.questions.length;
-
-
-let message =
-document
-.getElementById("performanceMessage");
-
-
-if(percentage >= 80){
-
-message.innerText =
-"🏆 Excellent Performance!";
-
-}
-
-else if(percentage >= 60){
-
-message.innerText =
-"🎯 Very Good Performance";
-
-}
-
-else if(percentage >= 40){
-
-message.innerText =
-"👍 Good — और Practice करें";
-
-}
-
-else{
-
-message.innerText =
-"📚 अधिक अभ्यास की जरूरत है";
+window.scrollTo(0,0);
 
 }
 
 
-createAnswerReview();
+/* ======================================================
+   DETAILED SOLUTION
+====================================================== */
 
-}
+function createSolutions(){
 
+const list =
+document.getElementById("resultList");
 
-/* =========================================================
-   ANSWER REVIEW
-========================================================= */
+list.innerHTML="";
 
-function createAnswerReview(){
+questions.forEach(
+(q,index)=>{
 
-let html =
+const item =
+document.createElement("div");
 
-"<h3>📋 Answer Review</h3>";
+item.className="solution";
 
+let userAnswerText=
+"Not Answered";
 
-activeExam.questions
-.forEach(
-function(question,index){
+let answerClass=
+"notanswer-text";
 
-let given =
-userAnswers[index];
+if(answers[index]!==null){
 
-
-let userAnswer =
-
-given === null
-
-?
-
-"उत्तर नहीं दिया"
-
-:
-
-question.o[given];
-
-
-let correctAnswer =
-
-question.o[
-question.a
+userAnswerText=
+q.options[
+answers[index]
 ];
 
+if(
+answers[index]===
+q.answer
+){
 
-html += `
+answerClass=
+"correct-text";
 
-<div class="review-question">
+}else{
 
-<strong>
+answerClass=
+"wrong-text";
 
-Q${index+1}.
-${question.q}
+}
 
-</strong>
+}
 
-<br>
+item.innerHTML=
 
-आपका उत्तर:
-${userAnswer}
+'<div class="solution-q">'+
 
-<br>
+'Q'+
+(index+1)+
+'. '+
+q.q+
 
-<span style="color:#14833b;font-weight:bold">
+'</div>'+
 
-✓ सही उत्तर:
-${correctAnswer}
+'<div class="answer-line">'+
+'आपका उत्तर: '+
+'<span class="'+
+answerClass+
+'">'+
+userAnswerText+
+'</span>'+
+'</div>'+
 
-</span>
+'<div class="answer-line">'+
+'सही उत्तर: '+
+'<span class="correct-text">'+
+q.options[q.answer]+
+'</span>'+
+'</div>'+
 
-</div>
+'<div class="explanation">'+
+'<strong>Explanation:</strong> '+
+q.explanation+
+'</div>';
 
-`;
+list.appendChild(item);
 
 });
 
+}
 
-document
-.getElementById("answerReview")
-.innerHTML =
-html;
+
+/* ======================================================
+   RESULT BUTTONS
+====================================================== */
+
+function goHome(){
+
+window.location.href=
+"home.html";
 
 }
 
 
-/* =========================================================
-   RESTART
-========================================================= */
+function retryTest(){
 
-function restartCurrentTest(){
-
-activeQuestion=0;
-
-userAnswers =
-new Array(
-activeExam.questions.length
-).fill(null);
-
-
-document
-.getElementById("testResult")
-.style.display="none";
-
-
-document
-.getElementById("testStart")
-.style.display="block";
+window.location.reload();
 
 }
 
 
-/* =========================================================
-   CLOSE
-========================================================= */
+/* ======================================================
+   START
+====================================================== */
 
-function closeTest(){
+loadExamInformation();
 
-clearInterval(
-examTimerInterval
-);
+loadQuestion();
 
-document
-.getElementById("testScreen")
-.style.display="none";
-
-}
-
-
-/* =========================================================
-   INITIAL LOAD
-========================================================= */
-
-document.addEventListener(
-"DOMContentLoaded",
-loadExamCards
-);
+startTimer();
 
 </script>
+
+</body>
+
+</html>
